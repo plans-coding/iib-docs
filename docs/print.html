@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-24929c72.js";
+            window.path_to_searchindex_js = "searchindex-4ebb427c.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-5f67551c.js"></script>
@@ -309,9 +309,9 @@ getLatestReleaseTag();
 </blockquote>
 <h2 id="basic-idea"><a class="header" href="#basic-idea">Basic idea</a></h2>
 <p>Over time, most code in applications becomes obsolete. To ensure your memories are not lost to such obsolescence, the core idea of this project is to visualize travel data stored in SQLite format. SQLite databases are easy to update using any of the many available tools, offer long-term reliability, and are more likely to remain compatible with future technologies. This makes it a solid, future-proof solution. However, scrolling through a database directly can be tedious—so why not build an interface on top? But this project is not just an application; it’s a versatile syntax that allows you to take travel notes in a simple and structured way.</p>
-<h3 id="three-main-features"><a class="header" href="#three-main-features">Three main features</a></h3>
+<h2 id="main-features"><a class="header" href="#main-features">Main features</a></h2>
 <ul>
-<li>A single SQLite database compliant with the Immer in Bewegung Trip Syntax</li>
+<li>A single SQLite database file with a few easy-to-understand tables</li>
 <li>Use directly on GitHub or host it on your own server</li>
 <li>Use in conjunction with Immich to combine your documentation with photos (optional)</li>
 </ul>
@@ -332,7 +332,7 @@ getLatestReleaseTag();
 </div>
 <h2 id="serverless-usage-simplest-choice"><a class="header" href="#serverless-usage-simplest-choice">Serverless usage (simplest choice)</a></h2>
 <p>Download the database template (read more about how to edit the file under <a href="#create-the-dataset">Create the dataset</a></p>
-<p><a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.db">https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.db</a></p>
+<p><a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite">https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite</a></p>
 <p>To bind your own SQLite file to the online application, go to</p>
 <p><a href="https://online.bewegung.app/?path=source">https://online.bewegung.app/?path=source</a></p>
 <p>Afterwards just start browsing your trips at</p>
@@ -390,6 +390,7 @@ getLatestReleaseTag();
 <tr><td>OverallDestination</td><td>Type in you trip primary destination. E.g. <strong>Finland</strong>, or <strong>Italia, Spain etc.</strong><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>DepartureDate</td><td>Your departure date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
 <tr><td>ReturnDate</td><td>Your return date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
+<tr><td>TripLabels</td><td>Add keywords to the trip for filter purposes.<br /><br /><strong>Syntax:</strong> <code>LabelA, LabelB, LabelC, ...</code></td></tr>
 <tr><td>MapPins</td><td>The main stops of your trip that you want to plot on the map.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>[ NAME_OF_MAP_PIN ]( LATITUDE, LONGITUDE )</code></td></tr>
 <tr><td>TripDescription</td><td>A short description that explain the aim of the trip. E.g. <strong>My fantastic summer trip to France</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>PhotoStarttime</td><td><em>For use with Immich.</em> If you leave your home at let say 8 pm and don’t want to include photos from earlier on <strong>departure day</strong>, then you can set a time here. If left empty, all photos from departure day will be included.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
@@ -477,218 +478,221 @@ getLatestReleaseTag();
 Abroad:#1d655e
 Attatchment:#C60C30
 </code></pre>
-<h3 id="participant-groups"><a class="header" href="#participant-groups">Participant Groups</a></h3>
-<p>Add the names of your different travel groups.<br /><br /><strong>Syntax:</strong> <code>&lt;string without space&gt;</code></p>
 <h3 id="continent-countries"><a class="header" href="#continent-countries">Continent Countries</a></h3>
 <p>If you want to change (make other country definitions or translate country names) the pre-defined country settings you can do it by changing in the country definitions. Only countries defined in the table <code>ContinentCountries</code>  can be used in your trip notes and only with the very exact spelling.</p>
 <blockquote class="blockquote-tag blockquote-tag-tip">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
 <p>Other language: If you have the countries in <code>bewb_Events</code> (<strong>CountriesDuringDay</strong>)  written in another languange than English, then you can change the app behaviour by translating the countries in <code>ContinentCountries</code> to your own language.</p>
 </blockquote>
-<pre><code class="language-Pre-defined countries">Europe:Albania
-Europe:Andorra
-Europe:Austria
-Europe:Belarus
-Europe:Belgium
-Europe:Bosnia and Herzegovina
-Europe:Bulgaria
-Europe:Croatia
-Europe:Cyprus
-Europe:Czech Republic
-Europe:Denmark
-Europe:Estonia
-Europe:Finland
-Europe:Finland-Åland
-Europe:France
-Europe:Georgia
-Europe:Germany
-Europe:Greece
-Europe:Hungary
-Europe:Iceland
-Europe:Ireland
-Europe:Italy
-Europe:Kosovo
-Europe:Latvia
-Europe:Liechtenstein
-Europe:Lithuania
-Europe:Luxembourg
-Europe:Malta
-Europe:Moldova
+<pre><code class="language-Pre-defined countries">Europe:Albania:AL
+Europe:Andorra:AD
+Europe:Belgium:BE
+Europe:Bosnia-and-Herzegovina:BA
+Europe:Bulgaria:BG
+Europe:Cyprus:CY
+Europe:Cyprus-Northern-Cyprus
+Europe:Denmark:DK
+Europe:Denmark-Faraoe-Islands:FO
+Europe:Estonia:EE
+Europe:Finland:FI
+Europe:Finland-Åland:AX
+Europe:France:FR
+Europe:Georgia:GE
+Europe:Greece:GR
+Europe:Ireland:IE
+Europe:Iceland:IS
+Europe:Italy:IT
+Europe:Kosovo:XK
+Europe:Croatia:HR
+Europe:Latvia:LV
+Europe:Liechtenstein:LI
+Europe:Lithuania:LT
+Europe:Luxembourg:LU
+Europe:Malta:MT
+Europe:Moldova:MD
 Europe:Moldova-Transnistria
-Europe:Monaco
-Europe:Montenegro
-Europe:Netherlands
-Europe:North Macedonia
-Europe:Norway
-Europe:Poland
-Europe:Portugal
-Europe:Romania
-Europe:Russia
-Europe:San Marino
-Europe:Serbia
-Europe:Slovakia
-Europe:Slovenia
-Europe:Spain
-Europe:Sweden
-Europe:Switzerland
-Europe:Ukraine
-Europe:United Kingdom
-Europe:United Kingdom-Akrotiri and Dhekelia
-Europe:United Kingdom-Gibraltar
-Europe:United Kingdom-Jersey
-Europe:Vatican City
-Asia:Afghanistan
-Asia:Armenia
-Asia:Azerbaijan
-Asia:Bahrain
-Asia:Bangladesh
-Asia:Bhutan
-Asia:Brunei
-Asia:Cambodia
-Asia:China
-Asia:Cyprus
-Asia:Georgia
-Asia:India
-Asia:Indonesia
-Asia:Iran
-Asia:Iraq
-Asia:Israel
-Asia:Japan
-Asia:Jordan
-Asia:Kazakhstan
-Asia:Kuwait
-Asia:Kyrgyzstan
-Asia:Laos
-Asia:Lebanon
-Asia:Malaysia
-Asia:Maldives
-Asia:Mongolia
-Asia:Myanmar
-Asia:Nepal
-Asia:North Korea
-Asia:Oman
-Asia:Pakistan
-Asia:Philippines
-Asia:Qatar
-Asia:Russia
-Asia:Saudi Arabia
-Asia:Singapore
-Asia:South Korea
-Asia:Sri Lanka
-Asia:Syria
-Asia:Taiwan
-Asia:Tajikistan
-Asia:Thailand
-Asia:Timor-Leste
-Asia:Turkey
-Asia:Turkmenistan
-Asia:United Arab Emirates
-Asia:Uzbekistan
-Asia:Vietnam
-Asia:Yemen
-North America:Antigua and Barbuda
-North America:Bahamas
-North America:Barbados
-North America:Belize
-North America:Canada
-North America:Costa Rica
-North America:Cuba
-North America:Dominica
-North America:Dominican Republic
-North America:El Salvador
-North America:Grenada
-North America:Guatemala
-North America:Haiti
-North America:Honduras
-North America:Jamaica
-North America:Mexico
-North America:Nicaragua
-North America:Panama
-North America:Saint Kitts and Nevis
-North America:Saint Lucia
-North America:Saint Vincent and the Grenadines
-North America:Trinidad and Tobago
-North America:United States
-South America:Argentina
-South America:Bolivia
-South America:Brazil
-South America:Chile
-South America:Colombia
-South America:Ecuador
-South America:Guyana
-South America:Paraguay
-South America:Peru
-South America:Suriname
-South America:Uruguay
-South America:Venezuela
-Africa:Algeria
-Africa:Angola
-Africa:Benin
-Africa:Botswana
-Africa:Burkina Faso
-Africa:Burundi
-Africa:Cabo Verde
-Africa:Cameroon
-Africa:Central African Republic
-Africa:Chad
-Africa:Comoros
-Africa:Democratic Republic of the Congo
-Africa:Djibouti
-Africa:Egypt
-Africa:Equatorial Guinea
-Africa:Eritrea
-Africa:Eswatini
-Africa:Ethiopia
-Africa:Gabon
-Africa:Gambia
-Africa:Ghana
-Africa:Guinea
-Africa:Guinea-Bissau
-Africa:Ivory Coast
-Africa:Kenya
-Africa:Lesotho
-Africa:Liberia
-Africa:Libya
-Africa:Madagascar
-Africa:Malawi
-Africa:Mali
-Africa:Mauritania
-Africa:Mauritius
-Africa:Morocco
-Africa:Mozambique
-Africa:Namibia
-Africa:Niger
-Africa:Nigeria
-Africa:Republic of the Congo
-Africa:Rwanda
-Africa:Sao Tome and Principe
-Africa:Senegal
-Africa:Seychelles
-Africa:Sierra Leone
-Africa:Somalia
-Africa:South Africa
-Africa:South Sudan
-Africa:Sudan
-Africa:Tanzania
-Africa:Togo
-Africa:Tunisia
-Africa:Uganda
-Africa:Zambia
-Africa:Zimbabwe
-Oceania:Australia
-Oceania:Fiji
-Oceania:Kiribati
-Oceania:Marshall Islands
-Oceania:Micronesia
-Oceania:Nauru
-Oceania:New Zealand
-Oceania:Palau
-Oceania:Papua New Guinea
-Oceania:Samoa
-Oceania:Solomon Islands
-Oceania:Tonga
-Oceania:Tuvalu
-Oceania:Vanuatu
+Europe:Monaco:MC
+Europe:Montenegro:ME
+Europe:Netherlands:NL
+Europe:North-Macedonia:MK
+Europe:Norway:NO
+Europe:Poland:PL
+Europe:Portugal:PT
+Europe:Romania:RO
+Europe:Russia:RU
+Europe:San-Marino:SM
+Europe:Switzerland:CH
+Europe:Serbia:RS
+Europe:Slovakia:SK
+Europe:Slovenia:SI
+Europe:Spain:ES
+Europe:United-Kingdom:GB
+Europe:United-Kingdom-Akrotiri-and-Dhekelia:GB
+Europe:United-Kingdom-Gibraltar:GI
+Europe:United-Kingdom-Jersey:JE
+Europe:United-Kingdom-Northern-Ireland:GB
+Europe:Sweden:SE
+Europe:Czech-Republic:CZ
+Europe:Germany:DE
+Europe:Ukraine:UA
+Europe:Hungary:HU
+Europe:Vatican:VA
+Europe:Belarus:BY
+Europe:Austria:AT
+Africa:Algeria:DZ
+Africa:Angola:AO
+Africa:Benin:BJ
+Africa:Botswana:BW
+Africa:Burkina-Faso:BF
+Africa:Burundi:BI
+Africa:Cabo-Verde:CV
+Africa:Central-African-Republic:CF
+Africa:Democratic-Republic-of-the-Congo:CD
+Africa:Djibouti:DJ
+Africa:Egypt:EG
+Africa:Equatorial-Guinea:GQ
+Africa:Ivory-Coast:CI
+Africa:Eritrea:ER
+Africa:Eswatini:SZ
+Africa:Ethiopia:ET
+Africa:Gabon:GA
+Africa:Gambia:GM
+Africa:Ghana:GH
+Africa:Guinea:GN
+Africa:Guinea-Bissau:GW
+Africa:Cameroon:CM
+Africa:Kenya:KE
+Africa:Comoros:KM
+Africa:Lesotho:LS
+Africa:Liberia:LR
+Africa:Libya:LY
+Africa:Madagascar:MG
+Africa:Malawi:MW
+Africa:Mali:ML
+Africa:Morocco:MA
+Africa:Mauritania:MR
+Africa:Mauritius:MU
+Africa:Mozambique:MZ
+Africa:Namibia:NA
+Africa:Niger:NE
+Africa:Nigeria:NG
+Africa:Republic-of-the-Congo:CG
+Africa:Rwanda:RW
+Africa:Senegal:SN
+Africa:Seychelles:SC
+Africa:Sierra-Leone:SL
+Africa:Somalia:SO
+Africa:Sudan:SD
+Africa:South-Africa:ZA
+Africa:South-Sudan:SS
+Africa:Sao-Tome-and-Principe:ST
+Africa:Tanzania:TZ
+Africa:Chad:TD
+Africa:Togo:TG
+Africa:Tunisia:TN
+Africa:Uganda:UG
+Africa:Zambia:ZM
+Africa:Zimbabwe:ZW
+Asia:Afghanistan:AF
+Asia:Armenia:AM
+Asia:Azerbaijan:AZ
+Asia:Bahrain:BH
+Asia:Bangladesh:BD
+Asia:Bhutan:BT
+Asia:Brunei:BN
+Asia:Cyprus:CY
+Asia:Cyprus-Northern-Cyprus
+Asia:Philippines:PH
+Asia:United-Arab-Emirates:AE
+Asia:Georgia:GE
+Asia:India:IN
+Asia:Indonesia:ID
+Asia:Iraq:IQ
+Asia:Iran:IR
+Asia:Israel:IL
+Asia:Japan:JP
+Asia:Yemen:YE
+Asia:Jordan:JO
+Asia:Cambodia:KH
+Asia:Kazakhstan:KZ
+Asia:China:CN
+Asia:Kyrgyzstan:KG
+Asia:Kuwait:KW
+Asia:Laos:LA
+Asia:Lebanon:LB
+Asia:Malaysia:MY
+Asia:Maldives:MV
+Asia:Mongolia:MN
+Asia:Myanmar:MM
+Asia:Nepal:NP
+Asia:North-Korea:KP
+Asia:Oman:OM
+Asia:Pakistan:PK
+Asia:Qatar:QA
+Asia:Russia:RU
+Asia:Saudi-Arabia:SA
+Asia:Singapore:SG
+Asia:Sri-Lanka:LK
+Asia:South-Korea:KR
+Asia:Syria:SY
+Asia:Tajikistan:TJ
+Asia:Taiwan:TW
+Asia:Thailand:TH
+Asia:Timor-Leste:TL
+Asia:Turkey:TR
+Asia:Turkmenistan:TM
+Asia:Uzbekistan:UZ
+Asia:Vietnam:VN
+North-America:Antigua-and-Barbuda:AG
+North-America:Bahamas:BS
+North-America:Barbados:BB
+North-America:Belize:BZ
+North-America:Costa-Rica:CR
+North-America:Denmark-Greenland:GL
+North-America:Dominica:DM
+North-America:Dominican-Republic:DO
+North-America:El-Salvador:SV
+North-America:Grenada:GD
+North-America:Guatemala:GT
+North-America:Haiti:HT
+North-America:Honduras:HN
+North-America:Jamaica:JM
+North-America:Canada:CA
+North-America:Cuba:CU
+North-America:Mexico:MX
+North-America:Nicaragua:NI
+North-America:Panama:PA
+North-America:Saint-Kitts-and-Nevis:KN
+North-America:Saint-Lucia:LC
+North-America:Saint-Vincent-and-the-Grenadines:VC
+North-America:Trinidad-and-Tobago:TT
+North-America:USA:US
+Oceania:Australia:AU
+Oceania:Fiji:FJ
+Oceania:Kiribati:KI
+Oceania:Marshall-Islands:MH
+Oceania:Micronesia:FM
+Oceania:Nauru:NR
+Oceania:New-Zealand:NZ
+Oceania:Palau:PW
+Oceania:Papua-New-Guinea:PG
+Oceania:Solomon-Islands:SB
+Oceania:Samoa:WS
+Oceania:Tonga:TO
+Oceania:Tuvalu:TV
+Oceania:Vanuatu:VU
+South-America:Argentina:AR
+South-America:Bolivia:BO
+South-America:Brazil:BR
+South-America:Chile:CL
+South-America:Colombia:CO
+South-America:Ecuador:EC
+South-America:Guyana:GY
+South-America:Paraguay:PY
+South-America:Peru:PE
+South-America:Suriname:SR
+South-America:Uruguay:UY
+South-America:Venezuela:VE
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="translations"><a class="header" href="#translations">Translations</a></h1>
@@ -795,7 +799,7 @@ immich.your-server-name.dedyn.io {
 </li>
 </ul>
 <h2 id="list-over-sql-queries"><a class="header" href="#list-over-sql-queries">List over SQL Queries</a></h2>
-<p>You can browse the folder <code>queries/</code> if you want to see what SQL queries the app is using. This can be useful if you want to make some analytics in another other software.</p>
+<p>You can browse the folder <code>src/queries/</code> if you want to see what SQL queries the app is using. This can be useful if you want to make some analytics in another other software.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="logotype"><a class="header" href="#logotype">Logotype</a></h1>
 <p>If you like Immer in Bewegung and want to link to the project from your homepage, you can use this button.</p>

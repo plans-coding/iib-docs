@@ -15,6 +15,7 @@ The first table in your SQLite file is named `bewa_Overview` with fields accordi
 |OverallDestination|Type in you trip primary destination. E.g. **Finland**, or **Italia, Spain etc.**<br /><br />**Syntax:** `<string>`
 |DepartureDate|Your departure date in ISO format.<br /><br />**Syntax:** `YYYY-MM-DD`
 |ReturnDate|Your return date in ISO format.<br /><br />**Syntax:** `YYYY-MM-DD`
+|TripLabels|Add keywords to the trip for filter purposes.<br /><br />**Syntax:** `LabelA, LabelB, LabelC, ...`
 |MapPins|The main stops of your trip that you want to plot on the map.<br /><br />**Syntax (multi-line accepted):** `[ NAME_OF_MAP_PIN ]( LATITUDE, LONGITUDE )`
 |TripDescription|A short description that explain the aim of the trip. E.g. **My fantastic summer trip to France**.<br /><br />**Syntax:** `<string>`
 |PhotoStarttime|*For use with Immich.* If you leave your home at let say 8 pm and don't want to include photos from earlier on **departure day**, then you can set a time here. If left empty, all photos from departure day will be included.<br /><br />**Syntax:** `HH:MM`

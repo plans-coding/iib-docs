@@ -37,10 +37,6 @@ Abroad:#1d655e
 Attatchment:#C60C30
 ```
 
-### Participant Groups
-
-Add the names of your different travel groups.<br /><br />**Syntax:** `<string without space>`
-
 
 ### Continent Countries
 
@@ -50,210 +46,215 @@ If you want to change (make other country definitions or translate country names
 > Other language: If you have the countries in `bewb_Events` (**CountriesDuringDay**)  written in another languange than English, then you can change the app behaviour by translating the countries in `ContinentCountries` to your own language.
 
 ```Pre-defined countries
-Europe:Albania
-Europe:Andorra
-Europe:Austria
-Europe:Belarus
-Europe:Belgium
-Europe:Bosnia and Herzegovina
-Europe:Bulgaria
-Europe:Croatia
-Europe:Cyprus
-Europe:Czech Republic
-Europe:Denmark
-Europe:Estonia
-Europe:Finland
-Europe:Finland-Åland
-Europe:France
-Europe:Georgia
-Europe:Germany
-Europe:Greece
-Europe:Hungary
-Europe:Iceland
-Europe:Ireland
-Europe:Italy
-Europe:Kosovo
-Europe:Latvia
-Europe:Liechtenstein
-Europe:Lithuania
-Europe:Luxembourg
-Europe:Malta
-Europe:Moldova
+Europe:Albania:AL
+Europe:Andorra:AD
+Europe:Belgium:BE
+Europe:Bosnia-and-Herzegovina:BA
+Europe:Bulgaria:BG
+Europe:Cyprus:CY
+Europe:Cyprus-Northern-Cyprus
+Europe:Denmark:DK
+Europe:Denmark-Faraoe-Islands:FO
+Europe:Estonia:EE
+Europe:Finland:FI
+Europe:Finland-Åland:AX
+Europe:France:FR
+Europe:Georgia:GE
+Europe:Greece:GR
+Europe:Ireland:IE
+Europe:Iceland:IS
+Europe:Italy:IT
+Europe:Kosovo:XK
+Europe:Croatia:HR
+Europe:Latvia:LV
+Europe:Liechtenstein:LI
+Europe:Lithuania:LT
+Europe:Luxembourg:LU
+Europe:Malta:MT
+Europe:Moldova:MD
 Europe:Moldova-Transnistria
-Europe:Monaco
-Europe:Montenegro
-Europe:Netherlands
-Europe:North Macedonia
-Europe:Norway
-Europe:Poland
-Europe:Portugal
-Europe:Romania
-Europe:Russia
-Europe:San Marino
-Europe:Serbia
-Europe:Slovakia
-Europe:Slovenia
-Europe:Spain
-Europe:Sweden
-Europe:Switzerland
-Europe:Ukraine
-Europe:United Kingdom
-Europe:United Kingdom-Akrotiri and Dhekelia
-Europe:United Kingdom-Gibraltar
-Europe:United Kingdom-Jersey
-Europe:Vatican City
-Asia:Afghanistan
-Asia:Armenia
-Asia:Azerbaijan
-Asia:Bahrain
-Asia:Bangladesh
-Asia:Bhutan
-Asia:Brunei
-Asia:Cambodia
-Asia:China
-Asia:Cyprus
-Asia:Georgia
-Asia:India
-Asia:Indonesia
-Asia:Iran
-Asia:Iraq
-Asia:Israel
-Asia:Japan
-Asia:Jordan
-Asia:Kazakhstan
-Asia:Kuwait
-Asia:Kyrgyzstan
-Asia:Laos
-Asia:Lebanon
-Asia:Malaysia
-Asia:Maldives
-Asia:Mongolia
-Asia:Myanmar
-Asia:Nepal
-Asia:North Korea
-Asia:Oman
-Asia:Pakistan
-Asia:Philippines
-Asia:Qatar
-Asia:Russia
-Asia:Saudi Arabia
-Asia:Singapore
-Asia:South Korea
-Asia:Sri Lanka
-Asia:Syria
-Asia:Taiwan
-Asia:Tajikistan
-Asia:Thailand
-Asia:Timor-Leste
-Asia:Turkey
-Asia:Turkmenistan
-Asia:United Arab Emirates
-Asia:Uzbekistan
-Asia:Vietnam
-Asia:Yemen
-North America:Antigua and Barbuda
-North America:Bahamas
-North America:Barbados
-North America:Belize
-North America:Canada
-North America:Costa Rica
-North America:Cuba
-North America:Dominica
-North America:Dominican Republic
-North America:El Salvador
-North America:Grenada
-North America:Guatemala
-North America:Haiti
-North America:Honduras
-North America:Jamaica
-North America:Mexico
-North America:Nicaragua
-North America:Panama
-North America:Saint Kitts and Nevis
-North America:Saint Lucia
-North America:Saint Vincent and the Grenadines
-North America:Trinidad and Tobago
-North America:United States
-South America:Argentina
-South America:Bolivia
-South America:Brazil
-South America:Chile
-South America:Colombia
-South America:Ecuador
-South America:Guyana
-South America:Paraguay
-South America:Peru
-South America:Suriname
-South America:Uruguay
-South America:Venezuela
-Africa:Algeria
-Africa:Angola
-Africa:Benin
-Africa:Botswana
-Africa:Burkina Faso
-Africa:Burundi
-Africa:Cabo Verde
-Africa:Cameroon
-Africa:Central African Republic
-Africa:Chad
-Africa:Comoros
-Africa:Democratic Republic of the Congo
-Africa:Djibouti
-Africa:Egypt
-Africa:Equatorial Guinea
-Africa:Eritrea
-Africa:Eswatini
-Africa:Ethiopia
-Africa:Gabon
-Africa:Gambia
-Africa:Ghana
-Africa:Guinea
-Africa:Guinea-Bissau
-Africa:Ivory Coast
-Africa:Kenya
-Africa:Lesotho
-Africa:Liberia
-Africa:Libya
-Africa:Madagascar
-Africa:Malawi
-Africa:Mali
-Africa:Mauritania
-Africa:Mauritius
-Africa:Morocco
-Africa:Mozambique
-Africa:Namibia
-Africa:Niger
-Africa:Nigeria
-Africa:Republic of the Congo
-Africa:Rwanda
-Africa:Sao Tome and Principe
-Africa:Senegal
-Africa:Seychelles
-Africa:Sierra Leone
-Africa:Somalia
-Africa:South Africa
-Africa:South Sudan
-Africa:Sudan
-Africa:Tanzania
-Africa:Togo
-Africa:Tunisia
-Africa:Uganda
-Africa:Zambia
-Africa:Zimbabwe
-Oceania:Australia
-Oceania:Fiji
-Oceania:Kiribati
-Oceania:Marshall Islands
-Oceania:Micronesia
-Oceania:Nauru
-Oceania:New Zealand
-Oceania:Palau
-Oceania:Papua New Guinea
-Oceania:Samoa
-Oceania:Solomon Islands
-Oceania:Tonga
-Oceania:Tuvalu
-Oceania:Vanuatu
+Europe:Monaco:MC
+Europe:Montenegro:ME
+Europe:Netherlands:NL
+Europe:North-Macedonia:MK
+Europe:Norway:NO
+Europe:Poland:PL
+Europe:Portugal:PT
+Europe:Romania:RO
+Europe:Russia:RU
+Europe:San-Marino:SM
+Europe:Switzerland:CH
+Europe:Serbia:RS
+Europe:Slovakia:SK
+Europe:Slovenia:SI
+Europe:Spain:ES
+Europe:United-Kingdom:GB
+Europe:United-Kingdom-Akrotiri-and-Dhekelia:GB
+Europe:United-Kingdom-Gibraltar:GI
+Europe:United-Kingdom-Jersey:JE
+Europe:United-Kingdom-Northern-Ireland:GB
+Europe:Sweden:SE
+Europe:Czech-Republic:CZ
+Europe:Germany:DE
+Europe:Ukraine:UA
+Europe:Hungary:HU
+Europe:Vatican:VA
+Europe:Belarus:BY
+Europe:Austria:AT
+Africa:Algeria:DZ
+Africa:Angola:AO
+Africa:Benin:BJ
+Africa:Botswana:BW
+Africa:Burkina-Faso:BF
+Africa:Burundi:BI
+Africa:Cabo-Verde:CV
+Africa:Central-African-Republic:CF
+Africa:Democratic-Republic-of-the-Congo:CD
+Africa:Djibouti:DJ
+Africa:Egypt:EG
+Africa:Equatorial-Guinea:GQ
+Africa:Ivory-Coast:CI
+Africa:Eritrea:ER
+Africa:Eswatini:SZ
+Africa:Ethiopia:ET
+Africa:Gabon:GA
+Africa:Gambia:GM
+Africa:Ghana:GH
+Africa:Guinea:GN
+Africa:Guinea-Bissau:GW
+Africa:Cameroon:CM
+Africa:Kenya:KE
+Africa:Comoros:KM
+Africa:Lesotho:LS
+Africa:Liberia:LR
+Africa:Libya:LY
+Africa:Madagascar:MG
+Africa:Malawi:MW
+Africa:Mali:ML
+Africa:Morocco:MA
+Africa:Mauritania:MR
+Africa:Mauritius:MU
+Africa:Mozambique:MZ
+Africa:Namibia:NA
+Africa:Niger:NE
+Africa:Nigeria:NG
+Africa:Republic-of-the-Congo:CG
+Africa:Rwanda:RW
+Africa:Senegal:SN
+Africa:Seychelles:SC
+Africa:Sierra-Leone:SL
+Africa:Somalia:SO
+Africa:Sudan:SD
+Africa:South-Africa:ZA
+Africa:South-Sudan:SS
+Africa:Sao-Tome-and-Principe:ST
+Africa:Tanzania:TZ
+Africa:Chad:TD
+Africa:Togo:TG
+Africa:Tunisia:TN
+Africa:Uganda:UG
+Africa:Zambia:ZM
+Africa:Zimbabwe:ZW
+Asia:Afghanistan:AF
+Asia:Armenia:AM
+Asia:Azerbaijan:AZ
+Asia:Bahrain:BH
+Asia:Bangladesh:BD
+Asia:Bhutan:BT
+Asia:Brunei:BN
+Asia:Cyprus:CY
+Asia:Cyprus-Northern-Cyprus
+Asia:Philippines:PH
+Asia:United-Arab-Emirates:AE
+Asia:Georgia:GE
+Asia:India:IN
+Asia:Indonesia:ID
+Asia:Iraq:IQ
+Asia:Iran:IR
+Asia:Israel:IL
+Asia:Japan:JP
+Asia:Yemen:YE
+Asia:Jordan:JO
+Asia:Cambodia:KH
+Asia:Kazakhstan:KZ
+Asia:China:CN
+Asia:Kyrgyzstan:KG
+Asia:Kuwait:KW
+Asia:Laos:LA
+Asia:Lebanon:LB
+Asia:Malaysia:MY
+Asia:Maldives:MV
+Asia:Mongolia:MN
+Asia:Myanmar:MM
+Asia:Nepal:NP
+Asia:North-Korea:KP
+Asia:Oman:OM
+Asia:Pakistan:PK
+Asia:Qatar:QA
+Asia:Russia:RU
+Asia:Saudi-Arabia:SA
+Asia:Singapore:SG
+Asia:Sri-Lanka:LK
+Asia:South-Korea:KR
+Asia:Syria:SY
+Asia:Tajikistan:TJ
+Asia:Taiwan:TW
+Asia:Thailand:TH
+Asia:Timor-Leste:TL
+Asia:Turkey:TR
+Asia:Turkmenistan:TM
+Asia:Uzbekistan:UZ
+Asia:Vietnam:VN
+North-America:Antigua-and-Barbuda:AG
+North-America:Bahamas:BS
+North-America:Barbados:BB
+North-America:Belize:BZ
+North-America:Costa-Rica:CR
+North-America:Denmark-Greenland:GL
+North-America:Dominica:DM
+North-America:Dominican-Republic:DO
+North-America:El-Salvador:SV
+North-America:Grenada:GD
+North-America:Guatemala:GT
+North-America:Haiti:HT
+North-America:Honduras:HN
+North-America:Jamaica:JM
+North-America:Canada:CA
+North-America:Cuba:CU
+North-America:Mexico:MX
+North-America:Nicaragua:NI
+North-America:Panama:PA
+North-America:Saint-Kitts-and-Nevis:KN
+North-America:Saint-Lucia:LC
+North-America:Saint-Vincent-and-the-Grenadines:VC
+North-America:Trinidad-and-Tobago:TT
+North-America:USA:US
+Oceania:Australia:AU
+Oceania:Fiji:FJ
+Oceania:Kiribati:KI
+Oceania:Marshall-Islands:MH
+Oceania:Micronesia:FM
+Oceania:Nauru:NR
+Oceania:New-Zealand:NZ
+Oceania:Palau:PW
+Oceania:Papua-New-Guinea:PG
+Oceania:Solomon-Islands:SB
+Oceania:Samoa:WS
+Oceania:Tonga:TO
+Oceania:Tuvalu:TV
+Oceania:Vanuatu:VU
+South-America:Argentina:AR
+South-America:Bolivia:BO
+South-America:Brazil:BR
+South-America:Chile:CL
+South-America:Colombia:CO
+South-America:Ecuador:EC
+South-America:Guyana:GY
+South-America:Paraguay:PY
+South-America:Peru:PE
+South-America:Suriname:SR
+South-America:Uruguay:UY
+South-America:Venezuela:VE
 ```
 
 

@@ -27,4 +27,4 @@ immich.your-server-name.dedyn.io {
     * Port forwarding over SSH (e.g. using Termius on Android)
     
 ## List over SQL Queries
-You can browse the folder `queries/` if you want to see what SQL queries the app is using. This can be useful if you want to make some analytics in another other software.
+You can browse the folder `src/queries/` if you want to see what SQL queries the app is using. This can be useful if you want to make some analytics in another other software.

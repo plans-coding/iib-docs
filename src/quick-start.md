@@ -11,7 +11,7 @@
 
 Download the database template (read more about how to edit the file under [Create the dataset](create-dataset.html)
 
-[https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.db](https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.db)
+[https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite](https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite)
 
 To bind your own SQLite file to the online application, go to
 

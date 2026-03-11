@@ -11,9 +11,9 @@ That is how **Immer in Bewegung** was born. The name, meaning *always in movemen
 
 Over time, most code in applications becomes obsolete. To ensure your memories are not lost to such obsolescence, the core idea of this project is to visualize travel data stored in SQLite format. SQLite databases are easy to update using any of the many available tools, offer long-term reliability, and are more likely to remain compatible with future technologies. This makes it a solid, future-proof solution. However, scrolling through a database directly can be tedious—so why not build an interface on top? But this project is not just an application; it's a versatile syntax that allows you to take travel notes in a simple and structured way.
 
-### Three main features
+## Main features
 
-- A single SQLite database compliant with the Immer in Bewegung Trip Syntax
+- A single SQLite database file with a few easy-to-understand tables
 - Use directly on GitHub or host it on your own server
 - Use in conjunction with Immich to combine your documentation with photos (optional)
 
