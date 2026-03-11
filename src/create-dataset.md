@@ -11,7 +11,7 @@
 For more detailed instructions, follow the [Trip Syntax](trip-syntax.html).
 
 > [!TIP]
-> Download a pre-filled [SQLite template file](https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.db) and edit the tables within.
+> Download a pre-filled [SQLite template file](https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite) and edit the tables within.
 
 > [!NOTE]
 > To obtain coordinates for a given position, you can use the [Coordinate Tool](https://online.bewegung.app/coordinate-tool.html) and easily copy and paste the coordinates into the SQLite file.
