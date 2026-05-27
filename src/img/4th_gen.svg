@@ -1,0 +1,32 @@
+<svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" overflow="visible" style="width:340px; height:340px; display:block; margin:auto;">
+
+  <g transform="rotate(45, 170, 170)">
+    <path fill="#1a0000" transform="translate(7,7)"
+      d="M170,10 L183,68 L220,28 L210,82 L258,55 L232,102 L288,95 L248,132 L308,145
+         L258,165 L318,195 L262,200 L304,238 L250,228 L272,272 L222,248 L222,308
+         L183,272 L170,330 L157,272 L118,308 L118,248 L68,272 L90,228
+         L36,238 L78,200 L22,195 L82,165 L32,145 L92,132 L52,95 L108,102
+         L82,55 L130,82 L120,28 L157,68 Z"/>
+    <path fill="#E8001A" stroke="#1a0000" stroke-width="5" stroke-linejoin="round"
+      d="M170,10 L183,68 L220,28 L210,82 L258,55 L232,102 L288,95 L248,132 L308,145
+         L258,165 L318,195 L262,200 L304,238 L250,228 L272,272 L222,248 L222,308
+         L183,272 L170,330 L157,272 L118,308 L118,248 L68,272 L90,228
+         L36,238 L78,200 L22,195 L82,165 L32,145 L92,132 L52,95 L108,102
+         L82,55 L130,82 L120,28 L157,68 Z"/>
+    <path fill="#8B0000" opacity="0.4"
+      d="M170,55 L179,95 L206,68 L198,105 L232,86 L212,120 L254,116 L224,144 L270,153
+         L228,168 L272,190 L228,194 L260,224 L218,216 L236,252 L198,232 L198,276
+         L170,248 L142,276 L142,232 L104,252 L122,216 L80,224 L112,194
+         L68,190 L112,168 L70,153 L116,144 L86,116 L128,120 L108,86 L142,105
+         L134,68 L161,95 Z"/>
+    <ellipse cx="155" cy="168" rx="48" ry="38" fill="#FF6060" opacity="0.3"/>
+
+    <text transform="rotate(-65, 170, 170)" font-family="'Open Sans', sans-serif" font-size="15" font-weight="700"
+          fill="#FFE033" text-anchor="middle">
+      <tspan x="170" y="158">The fourth generation &#x2014;</tspan>
+      <tspan x="170" dy="22">more powerful and verbose</tspan>
+      <tspan x="170" dy="22">than ever before!</tspan>
+    </text>
+  </g>
+
+</svg>

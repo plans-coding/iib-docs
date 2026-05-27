@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Immer in Bewegung Documentation — 3rd gen</title>
+        <title>Immer in Bewegung Documentation — 4th gen</title>
         <meta name="robots" content="noindex">
 
 
@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-4ebb427c.js";
+            window.path_to_searchindex_js = "searchindex-0008debf.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-5f67551c.js"></script>
@@ -138,7 +138,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Immer in Bewegung Documentation — 3rd gen</h1>
+                    <h1 class="menu-title">Immer in Bewegung Documentation — 4th gen</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -269,6 +269,9 @@ getLatestReleaseTag();
 </script>
 <br>
 <div class="start-container">
+    
+<div style="position:absolute;padding-left:10%;"><img src="img/4th_gen.svg" height="200"></div>
+
     <img src="img/frog.svg" style="height:150pt;">
         
 <h1 class="revisit">Revisit your travel memories</h1>
@@ -277,16 +280,14 @@ getLatestReleaseTag();
 <p>Open source travel documentation app for self-hosting or serverless usage<br><b>Lightweight and future proof</b></p>
 
         
-<p><br>Try out the online version using <a class="link" href="https://online.bewegung.app/">example data</a> or <a class="link" href="https://online.bewegung.app/?path=source">your own data</a>.</p>
+<p><br>Try out the <a class="link" href="https://go.bewegung.app/">online version</a><br><font style="font-size:12pt;"><i>Press the <b>Load</b> button on landing page to use example data.</i></font></p>
 
     <br>
 <div class="stripes">
 <div style="display:flex;">
     
 <div class="blur" style="display:flex;align-items: center;justify-content: center;bbackground-color:var(--sidebar-bg);border-radius:30pt;padding:0 20pt 0 20pt;margin:auto;flex-wrap:wrap;">
-        <img style="display:block;" src="https://rust-lang.org/static/images/rust-logo-blk.svg" alt="Rust" height="100">
-        <img style="display:block;" src="https://webassembly.org/css/webassembly.svg" alt="WebAssembly" height="60">   
-        <img style="display:block;" src="img/sqlite.svg" alt="SQLite" height="65">
+        <img style="display:block;margin:15px;" src="img/json.svg" alt="Javascript" height="65">
     </div>
 
 </div>
@@ -305,75 +306,62 @@ getLatestReleaseTag();
 <p>That is how <strong>Immer in Bewegung</strong> was born. The name, meaning <em>always in movement</em> in German, perfectly encapsulates the heart of this project. To bring this concept to life, the frog is chosen as the mascot—a symbol of endless motion and adventure.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>You can check out the online app running at <a href="https://online.bewegung.app/">https://online.bewegung.app/</a>. If you want to bind your own data, you can do so via <a href="https://online.bewegung.app/?path=source">https://online.bewegung.app/?path=source</a>.</p>
+<p>You can check out the online app running at <a href="https://go.bewegung.app/">https://go.bewegung.app/</a>. Click on <strong>Load</strong> if you want to try with example data.</p>
 </blockquote>
 <h2 id="basic-idea"><a class="header" href="#basic-idea">Basic idea</a></h2>
-<p>Over time, most code in applications becomes obsolete. To ensure your memories are not lost to such obsolescence, the core idea of this project is to visualize travel data stored in SQLite format. SQLite databases are easy to update using any of the many available tools, offer long-term reliability, and are more likely to remain compatible with future technologies. This makes it a solid, future-proof solution. However, scrolling through a database directly can be tedious—so why not build an interface on top? But this project is not just an application; it’s a versatile syntax that allows you to take travel notes in a simple and structured way.</p>
+<p>Over time, most code in applications becomes obsolete. To ensure your memories are not lost to such obsolescence, the core idea of this project is to visualize travel data stored in the <a href="https://www.json.org/" target="_blank">JSON</a> format. JavaScript Object Notation (JSON) is an incredibly structured way to store data, offers long-term reliability, and is more likely to remain compatible with future technologies. This makes it a solid, future-proof solution. However, scrolling through a long JSON file directly can be tedious—so why not build an interface on top? But this project is not just an application; it’s a versatile syntax that allows you to take travel notes in a simple and structured way.</p>
 <h2 id="main-features"><a class="header" href="#main-features">Main features</a></h2>
 <ul>
-<li>A single SQLite database file with a few easy-to-understand tables</li>
+<li>A single JSON file with an easy-to-understand syntax</li>
 <li>Use directly on GitHub or host it on your own server</li>
 <li>Use in conjunction with Immich to combine your documentation with photos (optional)</li>
 </ul>
-<p><img src="img/swe.svg" alt="img"> <strong>Made in Sweden</strong></p>
+<p><img src="img/swe.svg" alt="img"> <strong>An idea from Sweden</strong></p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="quick-start"><a class="header" href="#quick-start">Quick Start</a></h1>
-<h2 id="usage-combinations"><a class="header" href="#usage-combinations">Usage Combinations</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th></th><th>Serverless usage</th><th>Self-hosting</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Configuration</strong></td><td>Via settings in database file</td><td>Via settings in database file</td></tr>
-<tr><td><strong>Database</strong></td><td>Your own database file that you bind via the browser File API</td><td>Your own database file that you bind via the browser File API or database file stored on a server</td></tr>
-</tbody>
-</table>
-</div>
+<h2 id="usage-alternatives"><a class="header" href="#usage-alternatives">Usage alternatives</a></h2>
+<ul>
+<li>Serverless</li>
+<li>Self-hosted</li>
+</ul>
 <h2 id="serverless-usage-simplest-choice"><a class="header" href="#serverless-usage-simplest-choice">Serverless usage (simplest choice)</a></h2>
 <p>Download the database template (read more about how to edit the file under <a href="#create-the-dataset">Create the dataset</a></p>
-<p><a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite">https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite</a></p>
-<p>To bind your own SQLite file to the online application, go to</p>
-<p><a href="https://online.bewegung.app/?path=source">https://online.bewegung.app/?path=source</a></p>
-<p>Afterwards just start browsing your trips at</p>
-<p><a href="https://online.bewegung.app/">https://online.bewegung.app/</a></p>
+<p><a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/bewegung.json">https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/bewegung.json</a></p>
+<p>Go to <a href="https://go.bewegung.app/">https://go.bewegung.app/</a> and bind the downloaded file to the application.</p>
 <h2 id="host-on-your-own-server"><a class="header" href="#host-on-your-own-server">Host on your own server</a></h2>
-<p>If you want your app available from many devices without need to bind it specifillay on each device, you can develop your instance to your own server instead.</p>
-<h3 id="step-1--download-files"><a class="header" href="#step-1--download-files">Step 1 − Download files</a></h3>
-<p>Go to the directory where you want to place your files, e.g.</p>
-<pre><code>cd /var/www/iib
+<p>If you want your app available from many devices without need to bind it specifillay on each device, you can develop your instance to your own server instead. Go to the directory where you want to place your files, e.g.</p>
+<pre><code>cd /var/www/bewegung
 </code></pre>
 <p>Download the <a href="https://github.com/plans-coding/immer-in-bewegung/releases/latest/">latest release</a> and extract to the folder</p>
-<h3 id="step-2--edit-settings"><a class="header" href="#step-2--edit-settings">Step 2 − Edit settings</a></h3>
-<p>Specify your settings and the path to the database file in <code>server_db_path.txt</code>. Read more at <a href="#settings">Settings</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="create-the-dataset"><a class="header" href="#create-the-dataset">Create the dataset</a></h1>
-<h2 id="database-structure"><a class="header" href="#database-structure">Database Structure</a></h2>
+<h2 id="data-structure"><a class="header" href="#data-structure">Data Structure</a></h2>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Table</th><th>Type</th><th>Description</th></tr>
+<tr><th>Attribute</th><th>Level</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>bewa_Overview</strong></td><td>Table</td><td>The table that defines the extent of your trips. One trip per row.</td></tr>
-<tr><td><strong>bewb_Events</strong></td><td>Table</td><td>The table containg detailed notes from your trips. One row per day (date).</td></tr>
-<tr><td><strong>bewx_Settings</strong></td><td>Table</td><td>Where the settings for the app is stored.</td></tr>
+<tr><td><strong>Settings</strong></td><td>Root</td><td>This is the object that contains all app settings.</td></tr>
+<tr><td><strong>Trips</strong></td><td>Root</td><td>This is an array object where each child represents a single trip.</td></tr>
 </tbody>
 </table>
 </div>
 <p>For more detailed instructions, follow the <a href="#trip-syntax">Trip Syntax</a>.</p>
 <blockquote class="blockquote-tag blockquote-tag-tip">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
-<p>Download a pre-filled <a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/personal/bewegung.sqlite">SQLite template file</a> and edit the tables within.</p>
+<p>Download a pre-filled <a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/bewegung.json">JSON template file</a>.</p>
 </blockquote>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>To obtain coordinates for a given position, you can use the <a href="https://online.bewegung.app/coordinate-tool.html">Coordinate Tool</a> and easily copy and paste the coordinates into the SQLite file.</p>
+<p>To obtain coordinates for a given position, you can use the <a href="https://go.bewegung.app/coordinate-tool.html">Coordinate Tool</a> and easily copy and paste the coordinates into the Editor in the app.</p>
 </blockquote>
+<h2 id="visualisation"><a class="header" href="#visualisation">Visualisation</a></h2>
+<p><img src="img/json_structure.svg" alt="Mermaid diagram"></p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="trip-syntax"><a class="header" href="#trip-syntax">Trip Syntax</a></h1>
-<h2 id="table-overview"><a class="header" href="#table-overview">Table: Overview</a></h2>
-<p>The first table in your SQLite file is named <code>bewa_Overview</code> with fields according to following.</p>
+<h2 id="trip-object"><a class="header" href="#trip-object">Trip Object</a></h2>
+<p>Each trip object has fields according to the following. The name of the key of each trip is the InnerId, which is a unique six characters long string randomly generated at creation.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
 <p>Regarding validation: Some fields are checked for syntax and must comply to that.</p>
@@ -381,11 +369,10 @@ getLatestReleaseTag();
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Column</th><th>Description</th></tr>
+<tr><th>Field</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>InnerId</td><td>The InnerId is used to connect each row to date notes in table <code>bewb_Events</code>. It consists of a six characters long string generated randomly in Sqlite with <code>lower(hex(randomblob(3)))</code><br /><br /><strong>Syntax:</strong> <code>&lt;xxxxxx&gt;</code></td></tr>
-<tr><td>ParticipantGroup</td><td>Could e.g. be <strong>Family</strong>, <strong>Private</strong>, or <strong>Work</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>ArrangerGroup</td><td>Could e.g. be <strong>Family</strong>, <strong>Private</strong>, or <strong>Work</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>OuterId</td><td>The OuterID is exposed to end-user of the web app. Normally you can take the first letter of the TripDomain and the first letter of ParticipantGroup and add a chronological number.<br /><br /><strong>Syntax:</strong> <code>&lt;letters and dashes and serial numbers of your choice&gt;</code></td></tr>
 <tr><td>OverallDestination</td><td>Type in you trip primary destination. E.g. <strong>Finland</strong>, or <strong>Italia, Spain etc.</strong><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>DepartureDate</td><td>Your departure date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
@@ -395,11 +382,12 @@ getLatestReleaseTag();
 <tr><td>TripDescription</td><td>A short description that explain the aim of the trip. E.g. <strong>My fantastic summer trip to France</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>PhotoStarttime</td><td><em>For use with Immich.</em> If you leave your home at let say 8 pm and don’t want to include photos from earlier on <strong>departure day</strong>, then you can set a time here. If left empty, all photos from departure day will be included.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
 <tr><td>PhotoEndtime</td><td><em>For use with Immich.</em> Same as above, but for <strong>return day</strong>.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
+<tr><td>Days</td><td>An array containg each day and their related data. See below.</td></tr>
 </tbody>
 </table>
 </div>
-<h2 id="table-events"><a class="header" href="#table-events">Table: Events</a></h2>
-<p>The second table in your SQLite file is named <code>bewb_Events</code> with fields according to following.</p>
+<h2 id="trip-day-object"><a class="header" href="#trip-day-object">Trip Day Object</a></h2>
+<p>There is a second level array object in the trip object with fields according to following.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
 <p>Regarding validation: Some fields are checked for syntax and must comply to that.</p>
@@ -407,18 +395,17 @@ getLatestReleaseTag();
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Column Name</th><th>Description</th></tr>
+<tr><th>Field</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>InnerId</td><td>Reference to corresponding InnerId in table <code>bewa_Overview</code>.<br /><br /><strong>Syntax:</strong> <code>&lt;xxxxxx&gt;</code></td></tr>
 <tr><td>Date</td><td>Your date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
 <tr><td>Events</td><td>This is your fully description of what you did this day.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>Accommodation</td><td>The name and the address of your accommodation.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCountry</td><td>The name of the country you stayed in during the night.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCoordinateAccuracy</td><td>Possibility to mark the accuracy of the coordinates.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCoordinates</td><td>The gps coordinates of your accommodation, e.g. <strong>59.329444, 18.068611</strong>.<br /><br /><strong>Syntax:</strong> <code>lat_decimal,lng_decimal</code></td></tr>
-<tr><td>TravelParticipants</td><td>The name of your travel buddies, separated by comma. <strong>N.B.</strong> <em>Not exposured in web app.</em><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
-<tr><td>AdditionalNotes</td><td><strong>N.B.</strong> <em>Additional notes not exposured in web app.</em><br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>TravelParticipants</td><td>The name of your travel buddies, separated by comma. <strong>N.B.</strong> <em>This is not exposed in web app.</em><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>AdditionalNotes</td><td><strong>N.B.</strong> <em>Additional notes are not exposed in web app.</em><br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>CountriesDuringDay</td><td>This field is for enhanced statistics. Enter all countries in cronologial order during that day, separated by comma. The country names need to conform to the country names defined in <code>ContinentCountries</code>. In front of the country name prefix <code>*</code>, <code>**</code>, and <code>+</code> is allowed. Read more under <a href="#special-syntax-used-for-countries-during-day-events">Special syntax used for Countries During Day (Events)</a>.<br /><br /><strong>Syntax (prefix allowed):</strong> <code>&lt;country name without space&gt;, &lt;country name without space&gt;, &lt;country name without space&gt; [...]</code></td></tr>
 </tbody>
 </table>
@@ -442,29 +429,29 @@ getLatestReleaseTag();
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="settings"><a class="header" href="#settings">Settings</a></h1>
-<h2 id="path-to-database"><a class="header" href="#path-to-database">Path to database</a></h2>
-<p>Change the relative path to the database file in <code>server_db_path.txt</code> if you want your own database to load automatically when self-hosting.</p>
-<h2 id="database-file"><a class="header" href="#database-file">Database file</a></h2>
-<p>The settings is configured the database file table <code>bewx_Settings</code>. The following fields are applicable</p>
+<p>The following settings are applicable</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Attribute Group</th><th>Attribute</th><th>Value</th><th>Description</th></tr>
 </thead>
 <tbody>
+<tr><td>Base</td><td>HomeContinent</td><td><strong>Continent</strong></td><td>Use this to sort your home continent first.</td></tr>
 <tr><td>Base</td><td>HomeCountry</td><td><strong>Country</strong></td><td>Use this to remove your own country from the trip unique countries field. Use same spelling as in your notes and in the value of <code>ContinentCountries</code>.</td></tr>
-<tr><td>Base</td><td>LanguageFile</td><td><strong>Filename</strong></td><td>Filename to the translation file located in the <strong>personal</strong> folder, e.g. <code>swedish.json</code>.</td></tr>
+<tr><td>Base</td><td>LanguageFile</td><td><strong>Filename</strong></td><td>Filename to the translation file located in the <strong>languages</strong> folder, e.g. <code>swedish.json</code>.</td></tr>
+<tr><td>Definition</td><td>ArrangerGroups</td><td><strong>List</strong></td><td>Name of the arranger groups you want to use.</td></tr>
 <tr><td>Definition</td><td>ContinentCountries</td><td><strong>List</strong></td><td>Definitions of continents and countries as well as their language (and spelling).</td></tr>
 <tr><td>Definition</td><td>TripDomainColors</td><td><strong>List</strong></td><td>Color definitions of your trip domains.</td></tr>
 <tr><td>Base</td><td>Immich</td><td><strong>Disabled</strong> or <strong>Enabled</strong></td><td>Enable if you want filter links from all event dates to Immich.</td></tr>
 <tr><td>Photos</td><td>ImmichApiKey</td><td><strong>Key</strong></td><td></td></tr>
 <tr><td>Photos</td><td>ImmichCoverAlbumId</td><td><strong>GUID</strong></td><td>The GUID of the cover photo album in Immich.</td></tr>
-<tr><td>Feature</td><td>ImmichUrl</td><td><strong>URL</strong></td><td>Online URL to the Immich installation (e.g. <code>https://immich.example.com/</code>).</td></tr>
-<tr><td>Other</td><td>Dataset</td><td><strong>Disabled</strong> or <strong>Enabled</strong></td><td>If enabled, the link to Dataset is shown.</td></tr>
+<tr><td>Photos</td><td>ImmichUrl</td><td><strong>URL</strong></td><td>Online URL to the Immich installation (e.g. <code>https://immich.example.com/</code>).</td></tr>
 <tr><td>Other</td><td>ExternalMapProvider</td><td><strong>URL</strong></td><td>Set your prefered map provider.</td></tr>
 </tbody>
 </table>
 </div>
+<h3 id="arranger-group"><a class="header" href="#arranger-group">Arranger Group</a></h3>
+<p>A categorisation of the arrangers of different trips.</p>
 <h3 id="trip-domains"><a class="header" href="#trip-domains">Trip Domains</a></h3>
 <p>There are three pre-defined trip domains</p>
 <ul>
@@ -474,230 +461,244 @@ getLatestReleaseTag();
 </ul>
 <p>An attachment trip is defined as a visit to a country where you have a deeper connection. For example, if you study abroad, you might want to document that time but distinguish it from the ordinary abroad or domestic category.</p>
 <p>Set theme colors to your different <code>TripDomains</code>.</p>
-<pre><code>Domestic:#0b5394
-Abroad:#1d655e
-Attatchment:#C60C30
+<pre><code>Domestic: #0b5394
+Abroad: #1d655e
+Attatchment: #C60C30
 </code></pre>
 <h3 id="continent-countries"><a class="header" href="#continent-countries">Continent Countries</a></h3>
 <p>If you want to change (make other country definitions or translate country names) the pre-defined country settings you can do it by changing in the country definitions. Only countries defined in the table <code>ContinentCountries</code>  can be used in your trip notes and only with the very exact spelling.</p>
 <blockquote class="blockquote-tag blockquote-tag-tip">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
-<p>Other language: If you have the countries in <code>bewb_Events</code> (<strong>CountriesDuringDay</strong>)  written in another languange than English, then you can change the app behaviour by translating the countries in <code>ContinentCountries</code> to your own language.</p>
+<p>Other language: If you have the countries in your Trip notes written in another languange than English, then you can change the app behaviour by translating the countries in <code>ContinentCountries</code> to your own language.</p>
 </blockquote>
-<pre><code class="language-Pre-defined countries">Europe:Albania:AL
-Europe:Andorra:AD
-Europe:Belgium:BE
-Europe:Bosnia-and-Herzegovina:BA
-Europe:Bulgaria:BG
-Europe:Cyprus:CY
-Europe:Cyprus-Northern-Cyprus
-Europe:Denmark:DK
-Europe:Denmark-Faraoe-Islands:FO
-Europe:Estonia:EE
-Europe:Finland:FI
-Europe:Finland-Åland:AX
-Europe:France:FR
-Europe:Georgia:GE
-Europe:Greece:GR
-Europe:Ireland:IE
-Europe:Iceland:IS
-Europe:Italy:IT
-Europe:Kosovo:XK
-Europe:Croatia:HR
-Europe:Latvia:LV
-Europe:Liechtenstein:LI
-Europe:Lithuania:LT
-Europe:Luxembourg:LU
-Europe:Malta:MT
-Europe:Moldova:MD
-Europe:Moldova-Transnistria
-Europe:Monaco:MC
-Europe:Montenegro:ME
-Europe:Netherlands:NL
-Europe:North-Macedonia:MK
-Europe:Norway:NO
-Europe:Poland:PL
-Europe:Portugal:PT
-Europe:Romania:RO
-Europe:Russia:RU
-Europe:San-Marino:SM
-Europe:Switzerland:CH
-Europe:Serbia:RS
-Europe:Slovakia:SK
-Europe:Slovenia:SI
-Europe:Spain:ES
-Europe:United-Kingdom:GB
-Europe:United-Kingdom-Akrotiri-and-Dhekelia:GB
-Europe:United-Kingdom-Gibraltar:GI
-Europe:United-Kingdom-Jersey:JE
-Europe:United-Kingdom-Northern-Ireland:GB
-Europe:Sweden:SE
-Europe:Czech-Republic:CZ
-Europe:Germany:DE
-Europe:Ukraine:UA
-Europe:Hungary:HU
-Europe:Vatican:VA
-Europe:Belarus:BY
-Europe:Austria:AT
-Africa:Algeria:DZ
-Africa:Angola:AO
-Africa:Benin:BJ
-Africa:Botswana:BW
-Africa:Burkina-Faso:BF
-Africa:Burundi:BI
-Africa:Cabo-Verde:CV
-Africa:Central-African-Republic:CF
-Africa:Democratic-Republic-of-the-Congo:CD
-Africa:Djibouti:DJ
-Africa:Egypt:EG
-Africa:Equatorial-Guinea:GQ
-Africa:Ivory-Coast:CI
-Africa:Eritrea:ER
-Africa:Eswatini:SZ
-Africa:Ethiopia:ET
-Africa:Gabon:GA
-Africa:Gambia:GM
-Africa:Ghana:GH
-Africa:Guinea:GN
-Africa:Guinea-Bissau:GW
-Africa:Cameroon:CM
-Africa:Kenya:KE
-Africa:Comoros:KM
-Africa:Lesotho:LS
-Africa:Liberia:LR
-Africa:Libya:LY
-Africa:Madagascar:MG
-Africa:Malawi:MW
-Africa:Mali:ML
-Africa:Morocco:MA
-Africa:Mauritania:MR
-Africa:Mauritius:MU
-Africa:Mozambique:MZ
-Africa:Namibia:NA
-Africa:Niger:NE
-Africa:Nigeria:NG
-Africa:Republic-of-the-Congo:CG
-Africa:Rwanda:RW
-Africa:Senegal:SN
-Africa:Seychelles:SC
-Africa:Sierra-Leone:SL
-Africa:Somalia:SO
-Africa:Sudan:SD
-Africa:South-Africa:ZA
-Africa:South-Sudan:SS
-Africa:Sao-Tome-and-Principe:ST
-Africa:Tanzania:TZ
-Africa:Chad:TD
-Africa:Togo:TG
-Africa:Tunisia:TN
-Africa:Uganda:UG
-Africa:Zambia:ZM
-Africa:Zimbabwe:ZW
-Asia:Afghanistan:AF
-Asia:Armenia:AM
-Asia:Azerbaijan:AZ
-Asia:Bahrain:BH
-Asia:Bangladesh:BD
-Asia:Bhutan:BT
-Asia:Brunei:BN
-Asia:Cyprus:CY
-Asia:Cyprus-Northern-Cyprus
-Asia:Philippines:PH
-Asia:United-Arab-Emirates:AE
-Asia:Georgia:GE
-Asia:India:IN
-Asia:Indonesia:ID
-Asia:Iraq:IQ
-Asia:Iran:IR
-Asia:Israel:IL
-Asia:Japan:JP
-Asia:Yemen:YE
-Asia:Jordan:JO
-Asia:Cambodia:KH
-Asia:Kazakhstan:KZ
-Asia:China:CN
-Asia:Kyrgyzstan:KG
-Asia:Kuwait:KW
-Asia:Laos:LA
-Asia:Lebanon:LB
-Asia:Malaysia:MY
-Asia:Maldives:MV
-Asia:Mongolia:MN
-Asia:Myanmar:MM
-Asia:Nepal:NP
-Asia:North-Korea:KP
-Asia:Oman:OM
-Asia:Pakistan:PK
-Asia:Qatar:QA
-Asia:Russia:RU
-Asia:Saudi-Arabia:SA
-Asia:Singapore:SG
-Asia:Sri-Lanka:LK
-Asia:South-Korea:KR
-Asia:Syria:SY
-Asia:Tajikistan:TJ
-Asia:Taiwan:TW
-Asia:Thailand:TH
-Asia:Timor-Leste:TL
-Asia:Turkey:TR
-Asia:Turkmenistan:TM
-Asia:Uzbekistan:UZ
-Asia:Vietnam:VN
-North-America:Antigua-and-Barbuda:AG
-North-America:Bahamas:BS
-North-America:Barbados:BB
-North-America:Belize:BZ
-North-America:Costa-Rica:CR
-North-America:Denmark-Greenland:GL
-North-America:Dominica:DM
-North-America:Dominican-Republic:DO
-North-America:El-Salvador:SV
-North-America:Grenada:GD
-North-America:Guatemala:GT
-North-America:Haiti:HT
-North-America:Honduras:HN
-North-America:Jamaica:JM
-North-America:Canada:CA
-North-America:Cuba:CU
-North-America:Mexico:MX
-North-America:Nicaragua:NI
-North-America:Panama:PA
-North-America:Saint-Kitts-and-Nevis:KN
-North-America:Saint-Lucia:LC
-North-America:Saint-Vincent-and-the-Grenadines:VC
-North-America:Trinidad-and-Tobago:TT
-North-America:USA:US
-Oceania:Australia:AU
-Oceania:Fiji:FJ
-Oceania:Kiribati:KI
-Oceania:Marshall-Islands:MH
-Oceania:Micronesia:FM
-Oceania:Nauru:NR
-Oceania:New-Zealand:NZ
-Oceania:Palau:PW
-Oceania:Papua-New-Guinea:PG
-Oceania:Solomon-Islands:SB
-Oceania:Samoa:WS
-Oceania:Tonga:TO
-Oceania:Tuvalu:TV
-Oceania:Vanuatu:VU
-South-America:Argentina:AR
-South-America:Bolivia:BO
-South-America:Brazil:BR
-South-America:Chile:CL
-South-America:Colombia:CO
-South-America:Ecuador:EC
-South-America:Guyana:GY
-South-America:Paraguay:PY
-South-America:Peru:PE
-South-America:Suriname:SR
-South-America:Uruguay:UY
-South-America:Venezuela:VE
+<pre><code class="language-Pre-defined countries">{
+  "Africa": {
+    "Algeria": "DZ",
+    "Angola": "AO",
+    "Benin": "BJ",
+    "Botswana": "BW",
+    "Burkina-Faso": "BF",
+    "Burundi": "BI",
+    "Cabo-Verde": "CV",
+    "Cameroon": "CM",
+    "Central-African-Republic": "CF",
+    "Chad": "TD",
+    "Comoros": "KM",
+    "Democratic-Republic-of-the-Congo": "CD",
+    "Djibouti": "DJ",
+    "Egypt": "EG",
+    "Equatorial-Guinea": "GQ",
+    "Eritrea": "ER",
+    "Eswatini": "SZ",
+    "Ethiopia": "ET",
+    "Gabon": "GA",
+    "Gambia": "GM",
+    "Ghana": "GH",
+    "Guinea": "GN",
+    "Guinea-Bissau": "GW",
+    "Ivory-Coast": "CI",
+    "Kenya": "KE",
+    "Lesotho": "LS",
+    "Liberia": "LR",
+    "Libya": "LY",
+    "Madagascar": "MG",
+    "Malawi": "MW",
+    "Mali": "ML",
+    "Mauritania": "MR",
+    "Mauritius": "MU",
+    "Morocco": "MA",
+    "Mozambique": "MZ",
+    "Namibia": "NA",
+    "Niger": "NE",
+    "Nigeria": "NG",
+    "Republic-of-the-Congo": "CG",
+    "Rwanda": "RW",
+    "Sao-Tome-and-Principe": "ST",
+    "Senegal": "SN",
+    "Seychelles": "SC",
+    "Sierra-Leone": "SL",
+    "Somalia": "SO",
+    "South-Africa": "ZA",
+    "South-Sudan": "SS",
+    "Sudan": "SD",
+    "Tanzania": "TZ",
+    "Togo": "TG",
+    "Tunisia": "TN",
+    "Uganda": "UG",
+    "Zambia": "ZM",
+    "Zimbabwe": "ZW"
+  },
+  "Asia": {
+    "Afghanistan": "AF",
+    "Armenia": "AM",
+    "Azerbaijan": "AZ",
+    "Bahrain": "BH",
+    "Bangladesh": "BD",
+    "Bhutan": "BT",
+    "Brunei": "BN",
+    "Cambodia": "KH",
+    "China": "CN",
+    "Cyprus": "CY",
+    "Cyprus-Northern-Cyprus": null,
+    "Georgia": "GE",
+    "India": "IN",
+    "Indonesia": "ID",
+    "Iran": "IR",
+    "Iraq": "IQ",
+    "Israel": "IL",
+    "Japan": "JP",
+    "Jordan": "JO",
+    "Kazakhstan": "KZ",
+    "Kuwait": "KW",
+    "Kyrgyzstan": "KG",
+    "Laos": "LA",
+    "Lebanon": "LB",
+    "Malaysia": "MY",
+    "Maldives": "MV",
+    "Mongolia": "MN",
+    "Myanmar": "MM",
+    "Nepal": "NP",
+    "North-Korea": "KP",
+    "Oman": "OM",
+    "Pakistan": "PK",
+    "Philippines": "PH",
+    "Qatar": "QA",
+    "Russia": "RU",
+    "Saudi-Arabia": "SA",
+    "Singapore": "SG",
+    "South-Korea": "KR",
+    "Sri-Lanka": "LK",
+    "Syria": "SY",
+    "Taiwan": "TW",
+    "Tajikistan": "TJ",
+    "Thailand": "TH",
+    "Timor-Leste": "TL",
+    "Turkey": "TR",
+    "Turkmenistan": "TM",
+    "United-Arab-Emirates": "AE",
+    "Uzbekistan": "UZ",
+    "Vietnam": "VN",
+    "Yemen": "YE"
+  },
+  "Europe": {
+    "Albania": "AL",
+    "Andorra": "AD",
+    "Austria": "AT",
+    "Belarus": "BY",
+    "Belgium": "BE",
+    "Bosnia-and-Herzegovina": "BA",
+    "Bulgaria": "BG",
+    "Croatia": "HR",
+    "Cyprus": "CY",
+    "Cyprus-Northern-Cyprus": null,
+    "Czech-Republic": "CZ",
+    "Denmark": "DK",
+    "Denmark-Faraoe-Islands": "FO",
+    "Estonia": "EE",
+    "Finland": "FI",
+    "Finland-Åland": "AX",
+    "France": "FR",
+    "Georgia": "GE",
+    "Germany": "DE",
+    "Greece": "GR",
+    "Hungary": "HU",
+    "Iceland": "IS",
+    "Ireland": "IE",
+    "Italy": "IT",
+    "Kosovo": "XK",
+    "Latvia": "LV",
+    "Liechtenstein": "LI",
+    "Lithuania": "LT",
+    "Luxembourg": "LU",
+    "Malta": "MT",
+    "Moldova": "MD",
+    "Moldova-Transnistria": null,
+    "Monaco": "MC",
+    "Montenegro": "ME",
+    "Netherlands": "NL",
+    "North-Macedonia": "MK",
+    "Norway": "NO",
+    "Poland": "PL",
+    "Portugal": "PT",
+    "Romania": "RO",
+    "Russia": "RU",
+    "San-Marino": "SM",
+    "Serbia": "RS",
+    "Slovakia": "SK",
+    "Slovenia": "SI",
+    "Spain": "ES",
+    "Sweden": "SE",
+    "Switzerland": "CH",
+    "Ukraine": "UA",
+    "United-Kingdom": "GB",
+    "United-Kingdom-Akrotiri-and-Dhekelia": "GB",
+    "United-Kingdom-Gibraltar": "GI",
+    "United-Kingdom-Jersey": "JE",
+    "United-Kingdom-Northern-Ireland": "GB",
+    "Vatican-City": "VA"
+  },
+  "North-America": {
+    "Antigua-and-Barbuda": "AG",
+    "Bahamas": "BS",
+    "Barbados": "BB",
+    "Belize": "BZ",
+    "Canada": "CA",
+    "Costa-Rica": "CR",
+    "Cuba": "CU",
+    "Denmark-Greenland": "GL",
+    "Dominica": "DM",
+    "Dominican-Republic": "DO",
+    "El-Salvador": "SV",
+    "Grenada": "GD",
+    "Guatemala": "GT",
+    "Haiti": "HT",
+    "Honduras": "HN",
+    "Jamaica": "JM",
+    "Mexico": "MX",
+    "Nicaragua": "NI",
+    "Panama": "PA",
+    "Saint-Kitts-and-Nevis": "KN",
+    "Saint-Lucia": "LC",
+    "Saint-Vincent-and-the-Grenadines": "VC",
+    "Trinidad-and-Tobago": "TT",
+    "USA": "US"
+  },
+  "Oceania": {
+    "Australia": "AU",
+    "Fiji": "FJ",
+    "Kiribati": "KI",
+    "Marshall-Islands": "MH",
+    "Micronesia": "FM",
+    "Nauru": "NR",
+    "New-Zealand": "NZ",
+    "Palau": "PW",
+    "Papua-New-Guinea": "PG",
+    "Samoa": "WS",
+    "Solomon-Islands": "SB",
+    "Tonga": "TO",
+    "Tuvalu": "TV",
+    "Vanuatu": "VU"
+  },
+  "South-America": {
+    "Argentina": "AR",
+    "Bolivia": "BO",
+    "Brazil": "BR",
+    "Chile": "CL",
+    "Colombia": "CO",
+    "Ecuador": "EC",
+    "Guyana": "GY",
+    "Paraguay": "PY",
+    "Peru": "PE",
+    "Suriname": "SR",
+    "Uruguay": "UY",
+    "Venezuela": "VE"
+  }
+}
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="translations"><a class="header" href="#translations">Translations</a></h1>
 <h2 id="app-translation"><a class="header" href="#app-translation">App translation</a></h2>
-<p>If the app is not available in your language you can easily translate it by placing a file in the folder <strong>personal/</strong> and change the value in settings table <code>bewx_Settings</code>.</p>
+<p>If the app is not available in your language you can easily translate it by placing a file in the folder <strong>languages/</strong> and change the language under Settings.</p>
 <p>Read more under <a href="#settings">Settings</a>.</p>
 <h2 id="continent-and-country-translations"><a class="header" href="#continent-and-country-translations">Continent and Country translations</a></h2>
 <p>The continent and countries can be translated, read more <a href="#continent-countries">Continent Countries</a>.</p>
@@ -721,7 +722,6 @@ body:has(#search-chips:target) #search-content {
 }
 </code></pre>
 <p>to <strong>User Icon</strong> &gt; <strong>Admininstration</strong> &gt; <strong>Settings</strong> &gt; <strong>Theme Settings</strong>: Custom CSS.</p>
-<p><img src="img/immich_search_bar.png" alt="img"></p>
 <h2 id="usage-of-immich-api"><a class="header" href="#usage-of-immich-api">Usage of Immich API</a></h2>
 <p>To make use of Immich API you need to allow CORS, example snippet to add to <strong>/etc/caddy/Caddyfile</strong></p>
 <pre><code>(cors) {
@@ -778,7 +778,7 @@ immich.your-server-name.dedyn.io {
                 iib $2a$14$basROD3Y0cLE.VqXd.h89.akCQDKzhp6IH9ND2CRFyEICkMrKn3AO        
         }
 
-        root /var/www/iib/
+        root /var/www/bewegung/
 
 }
 </code></pre>
@@ -798,8 +798,9 @@ immich.your-server-name.dedyn.io {
 </ul>
 </li>
 </ul>
-<h2 id="list-over-sql-queries"><a class="header" href="#list-over-sql-queries">List over SQL Queries</a></h2>
-<p>You can browse the folder <code>src/queries/</code> if you want to see what SQL queries the app is using. This can be useful if you want to make some analytics in another other software.</p>
+<h2 id="usage-of-sqlite"><a class="header" href="#usage-of-sqlite">Usage of SQLite</a></h2>
+<p>Earlier editions of this application featured SQLite as the storage format instead of JSON. If you want to make a copy of your JSON documentation and store it in SQLlite you can use the file located at <code>extra/json_input_without_settings.sql</code> and paste the json code into it.</p>
+<img style="display:block;" src="img/sqlite.svg" alt="SQLite" height="65">
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="logotype"><a class="header" href="#logotype">Logotype</a></h1>
 <p>If you like Immer in Bewegung and want to link to the project from your homepage, you can use this button.</p>

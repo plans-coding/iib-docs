@@ -17,8 +17,6 @@ body:has(#search-chips:target) #search-content {
 ```
 to **User Icon** > **Admininstration** > **Settings** > **Theme Settings**: Custom CSS.
 
-![img](img/immich_search_bar.png)
-
 ## Usage of Immich API
 To make use of Immich API you need to allow CORS, example snippet to add to **/etc/caddy/Caddyfile**
 

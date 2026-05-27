@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Trip Syntax - Immer in Bewegung Documentation — 3rd gen</title>
+        <title>Trip Syntax - Immer in Bewegung Documentation — 4th gen</title>
 
 
         <!-- Custom HTML head -->
@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-4ebb427c.js";
+            window.path_to_searchindex_js = "searchindex-0008debf.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-5f67551c.js"></script>
@@ -137,7 +137,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Immer in Bewegung Documentation — 3rd gen</h1>
+                    <h1 class="menu-title">Immer in Bewegung Documentation — 4th gen</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -178,8 +178,8 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="trip-syntax"><a class="header" href="#trip-syntax">Trip Syntax</a></h1>
-<h2 id="table-overview"><a class="header" href="#table-overview">Table: Overview</a></h2>
-<p>The first table in your SQLite file is named <code>bewa_Overview</code> with fields according to following.</p>
+<h2 id="trip-object"><a class="header" href="#trip-object">Trip Object</a></h2>
+<p>Each trip object has fields according to the following. The name of the key of each trip is the InnerId, which is a unique six characters long string randomly generated at creation.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
 <p>Regarding validation: Some fields are checked for syntax and must comply to that.</p>
@@ -187,11 +187,10 @@
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Column</th><th>Description</th></tr>
+<tr><th>Field</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>InnerId</td><td>The InnerId is used to connect each row to date notes in table <code>bewb_Events</code>. It consists of a six characters long string generated randomly in Sqlite with <code>lower(hex(randomblob(3)))</code><br /><br /><strong>Syntax:</strong> <code>&lt;xxxxxx&gt;</code></td></tr>
-<tr><td>ParticipantGroup</td><td>Could e.g. be <strong>Family</strong>, <strong>Private</strong>, or <strong>Work</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>ArrangerGroup</td><td>Could e.g. be <strong>Family</strong>, <strong>Private</strong>, or <strong>Work</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>OuterId</td><td>The OuterID is exposed to end-user of the web app. Normally you can take the first letter of the TripDomain and the first letter of ParticipantGroup and add a chronological number.<br /><br /><strong>Syntax:</strong> <code>&lt;letters and dashes and serial numbers of your choice&gt;</code></td></tr>
 <tr><td>OverallDestination</td><td>Type in you trip primary destination. E.g. <strong>Finland</strong>, or <strong>Italia, Spain etc.</strong><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>DepartureDate</td><td>Your departure date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
@@ -201,11 +200,12 @@
 <tr><td>TripDescription</td><td>A short description that explain the aim of the trip. E.g. <strong>My fantastic summer trip to France</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>PhotoStarttime</td><td><em>For use with Immich.</em> If you leave your home at let say 8 pm and don’t want to include photos from earlier on <strong>departure day</strong>, then you can set a time here. If left empty, all photos from departure day will be included.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
 <tr><td>PhotoEndtime</td><td><em>For use with Immich.</em> Same as above, but for <strong>return day</strong>.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
+<tr><td>Days</td><td>An array containg each day and their related data. See below.</td></tr>
 </tbody>
 </table>
 </div>
-<h2 id="table-events"><a class="header" href="#table-events">Table: Events</a></h2>
-<p>The second table in your SQLite file is named <code>bewb_Events</code> with fields according to following.</p>
+<h2 id="trip-day-object"><a class="header" href="#trip-day-object">Trip Day Object</a></h2>
+<p>There is a second level array object in the trip object with fields according to following.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
 <p>Regarding validation: Some fields are checked for syntax and must comply to that.</p>
@@ -213,18 +213,17 @@
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Column Name</th><th>Description</th></tr>
+<tr><th>Field</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>InnerId</td><td>Reference to corresponding InnerId in table <code>bewa_Overview</code>.<br /><br /><strong>Syntax:</strong> <code>&lt;xxxxxx&gt;</code></td></tr>
 <tr><td>Date</td><td>Your date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
 <tr><td>Events</td><td>This is your fully description of what you did this day.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>Accommodation</td><td>The name and the address of your accommodation.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCountry</td><td>The name of the country you stayed in during the night.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCoordinateAccuracy</td><td>Possibility to mark the accuracy of the coordinates.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCoordinates</td><td>The gps coordinates of your accommodation, e.g. <strong>59.329444, 18.068611</strong>.<br /><br /><strong>Syntax:</strong> <code>lat_decimal,lng_decimal</code></td></tr>
-<tr><td>TravelParticipants</td><td>The name of your travel buddies, separated by comma. <strong>N.B.</strong> <em>Not exposured in web app.</em><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
-<tr><td>AdditionalNotes</td><td><strong>N.B.</strong> <em>Additional notes not exposured in web app.</em><br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>TravelParticipants</td><td>The name of your travel buddies, separated by comma. <strong>N.B.</strong> <em>This is not exposed in web app.</em><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>AdditionalNotes</td><td><strong>N.B.</strong> <em>Additional notes are not exposed in web app.</em><br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>CountriesDuringDay</td><td>This field is for enhanced statistics. Enter all countries in cronologial order during that day, separated by comma. The country names need to conform to the country names defined in <code>ContinentCountries</code>. In front of the country name prefix <code>*</code>, <code>**</code>, and <code>+</code> is allowed. Read more under <a href="#special-syntax-used-for-countries-during-day-events">Special syntax used for Countries During Day (Events)</a>.<br /><br /><strong>Syntax (prefix allowed):</strong> <code>&lt;country name without space&gt;, &lt;country name without space&gt;, &lt;country name without space&gt; [...]</code></td></tr>
 </tbody>
 </table>

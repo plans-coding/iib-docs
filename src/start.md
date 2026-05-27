@@ -88,18 +88,17 @@ getLatestReleaseTag();
 </script>
 <br>
 <div class="start-container">
+    <div style="position:absolute;padding-left:10%;"><img src="img/4th_gen.svg" height="200"></div>
     <img src="img/frog.svg" style="height:150pt;">
         <h1 class="revisit">Revisit your travel memories</h1>
         <p>Open source travel documentation app for self-hosting or serverless usage<br><b>Lightweight and future proof</b></p>
-        <p><br>Try out the online version using <a class="link" href="https://online.bewegung.app/">example data</a> or <a class="link" href="https://online.bewegung.app/?path=source">your own data</a>.</p>
+        <p><br>Try out the <a class="link" href="https://go.bewegung.app/">online version</a><br><font style="font-size:12pt;"><i>Press the <b>Load</b> button on landing page to use example data.</i></font></p>
     <br>
 
 <div class="stripes">
 <div style="display:flex;">
     <div class="blur" style="display:flex;align-items: center;justify-content: center;bbackground-color:var(--sidebar-bg);border-radius:30pt;padding:0 20pt 0 20pt;margin:auto;flex-wrap:wrap;">
-        <img style="display:block;" src="https://rust-lang.org/static/images/rust-logo-blk.svg" alt="Rust" height="100">
-        <img style="display:block;" src="https://webassembly.org/css/webassembly.svg" alt="WebAssembly" height="60">&nbsp;&nbsp;&nbsp;
-        <img style="display:block;" src="img/sqlite.svg" alt="SQLite" height="65">
+        <img style="display:block;margin:15px;" src="img/json.svg" alt="Javascript" height="65">
     </div>
 </div>
 

@@ -2,7 +2,7 @@
 
 ## App translation
 
-If the app is not available in your language you can easily translate it by placing a file in the folder **personal/** and change the value in settings table `bewx_Settings`.
+If the app is not available in your language you can easily translate it by placing a file in the folder **languages/** and change the language under Settings.
 
 Read more under [Settings](settings.html).
 

@@ -1,0 +1,26 @@
+```mermaid classDiagram class Root { Settings Trips
+    }
+    class Settings { Base Definition Extension Other Photos
+    }
+    class Base { HomeContinent HomeCountry LanguageFile
+    }
+    class Definition { ArrangerGroups ContinentCountries TripDomainColors
+    }
+    class ContinentCountries { Africa Asia Europe North-America Oceania South-America
+    }
+    class Continent { CountryName : IsoCode
+    }
+    class TripDomainColors { Abroad Attachment Domestic
+    }
+    class Other { ExcludeDayPhotos ExternalMapProvider
+    }
+    class Photos { Immich ImmichApiKey ImmichCoverAlbumId ImmichUrl
+    }
+    class Trips { tripId : TripEntry
+    }
+    class TripEntry { ArrangerGroup CoverPhoto Days DepartureDate DocumentationNote EndNode MapPins OuterId OverallDestination PhotoAlbums PhotoEndtime PhotoStarttime ReturnDate StartNode TripDescription TripDomain TripLabels
+    }
+    class Day { Accommodation AccommodationCoordinates AccommodationCoordinatesAccuracy AccommodationCountry AdditionalNotes CountriesDuringDay Date Events TravelParticipants
+    }
+    Root --> Settings Root --> Trips Settings --> Base Settings --> Definition Settings --> Other Settings --> Photos Definition --> ContinentCountries Definition --> TripDomainColors ContinentCountries --> Continent Trips --> TripEntry TripEntry --> Day
+```

@@ -12,7 +12,7 @@ immich.your-server-name.dedyn.io {
                 iib $2a$14$basROD3Y0cLE.VqXd.h89.akCQDKzhp6IH9ND2CRFyEICkMrKn3AO        
         }
 
-        root /var/www/iib/
+        root /var/www/bewegung/
 
 }
 ```
@@ -26,5 +26,7 @@ immich.your-server-name.dedyn.io {
     * Client certificates, or
     * Port forwarding over SSH (e.g. using Termius on Android)
     
-## List over SQL Queries
-You can browse the folder `src/queries/` if you want to see what SQL queries the app is using. This can be useful if you want to make some analytics in another other software.
+## Usage of SQLite
+Earlier editions of this application featured SQLite as the storage format instead of JSON. If you want to make a copy of your JSON documentation and store it in SQLlite you can use the file located at `extra/json_input_without_settings.sql` and paste the json code into it.
+
+<img style="display:block;" src="img/sqlite.svg" alt="SQLite" height="65">
