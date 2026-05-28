@@ -1,26 +1,108 @@
-```mermaid classDiagram class Root { Settings Trips
+```mermaid
+classDiagram
+    class Root {
+        Settings
+        Trips
     }
-    class Settings { Base Definition Extension Other Photos
+    class Settings {
+        Base
+        Definition
+        Extension
+        Other
+        Photos
     }
-    class Base { HomeContinent HomeCountry LanguageFile
+    class Base {
+        HomeContinent
+        HomeCountry
+        LanguageFile
     }
-    class Definition { ArrangerGroups ContinentCountries TripDomainColors
+    class Definition {
+        ArrangerGroups
+        ContinentCountries
+        TripDomainColors
     }
-    class ContinentCountries { Africa Asia Europe North-America Oceania South-America
+    class ContinentCountries {
+        Africa
+        Asia
+        Europe
+        North-America
+        Oceania
+        South-America
     }
-    class Continent { CountryName : IsoCode
+    class Continent {
+        CountryName : IsoCode
     }
-    class TripDomainColors { Abroad Attachment Domestic
+    class TripDomainColors {
+        Abroad
+        Attachment
+        Domestic
     }
-    class Other { ExcludeDayPhotos ExternalMapProvider
+    class Extension {
+        Diary
+        Movie
+        Passport
+        Theme
     }
-    class Photos { Immich ImmichApiKey ImmichCoverAlbumId ImmichUrl
+    class ExtensionPlugin {
+        Enabled
+        Items
+        Path
+        Translation
     }
-    class Trips { tripId : TripEntry
+    class Other {
+        ExcludeDayPhotos
+        ExternalMapProvider
     }
-    class TripEntry { ArrangerGroup CoverPhoto Days DepartureDate DocumentationNote EndNode MapPins OuterId OverallDestination PhotoAlbums PhotoEndtime PhotoStarttime ReturnDate StartNode TripDescription TripDomain TripLabels
+    class Photos {
+        Immich
+        ImmichApiKey
+        ImmichCoverAlbumId
+        ImmichUrl
     }
-    class Day { Accommodation AccommodationCoordinates AccommodationCoordinatesAccuracy AccommodationCountry AdditionalNotes CountriesDuringDay Date Events TravelParticipants
+    class Trips {
+        tripId : TripEntry
     }
-    Root --> Settings Root --> Trips Settings --> Base Settings --> Definition Settings --> Other Settings --> Photos Definition --> ContinentCountries Definition --> TripDomainColors ContinentCountries --> Continent Trips --> TripEntry TripEntry --> Day
+    class TripEntry {
+        ArrangerGroup
+        CoverPhoto
+        Days
+        DepartureDate
+        DocumentationNote
+        EndNode
+        MapPins
+        OuterId
+        OverallDestination
+        PhotoAlbums
+        PhotoEndtime
+        PhotoStarttime
+        ReturnDate
+        StartNode
+        TripDescription
+        TripDomain
+        TripLabels
+    }
+    class Day {
+        Accommodation
+        AccommodationCoordinates
+        AccommodationCoordinatesAccuracy
+        AccommodationCountry
+        AdditionalNotes
+        CountriesDuringDay
+        Date
+        Events
+        TravelParticipants
+    }
+    Root --> Settings
+    Root --> Trips
+    Settings --> Base
+    Settings --> Definition
+    Settings --> Extension
+    Settings --> Other
+    Settings --> Photos
+    Definition --> ContinentCountries
+    Definition --> TripDomainColors
+    ContinentCountries --> Continent
+    Extension --> ExtensionPlugin
+    Trips --> TripEntry
+    TripEntry --> Day
 ```

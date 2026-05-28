@@ -27,6 +27,6 @@ immich.your-server-name.dedyn.io {
     * Port forwarding over SSH (e.g. using Termius on Android)
     
 ## Usage of SQLite
-Earlier editions of this application featured SQLite as the storage format instead of JSON. If you want to make a copy of your JSON documentation and store it in SQLlite you can use the file located at `extra/json_input_without_settings.sql` and paste the json code into it.
+Earlier editions of this application featured SQLite as the storage format instead of JSON. If you want to make a copy of your JSON documentation and store it in SQLite you can use the conversion tool located at [https://go.bewegung.app/extra/json2sqlite.html](https://go.bewegung.app/extra/json2sqlite.html).
 
 <img style="display:block;" src="img/sqlite.svg" alt="SQLite" height="65">

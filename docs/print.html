@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-0008debf.js";
+            window.path_to_searchindex_js = "searchindex-0cb7ff7e.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-5f67551c.js"></script>
@@ -280,7 +280,7 @@ getLatestReleaseTag();
 <p>Open source travel documentation app for self-hosting or serverless usage<br><b>Lightweight and future proof</b></p>
 
         
-<p><br>Try out the <a class="link" href="https://go.bewegung.app/">online version</a><br><font style="font-size:12pt;"><i>Press the <b>Load</b> button on landing page to use example data.</i></font></p>
+<p><br>Try out the <a class="link" href="https://go.bewegung.app/">online version</a><br><font style="font-size:12pt;line-height:1;"><i>Press the <b>Load</b> button on landing page to use example data.</i></font></p>
 
     <br>
 <div class="stripes">
@@ -325,14 +325,14 @@ getLatestReleaseTag();
 <li>Self-hosted</li>
 </ul>
 <h2 id="serverless-usage-simplest-choice"><a class="header" href="#serverless-usage-simplest-choice">Serverless usage (simplest choice)</a></h2>
-<p>Download the database template (read more about how to edit the file under <a href="#create-the-dataset">Create the dataset</a></p>
+<p>Download the database template (read more about how to edit the file under <a href="#create-the-dataset">Create the dataset</a>).</p>
 <p><a href="https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/bewegung.json">https://github.com/plans-coding/immer-in-bewegung/raw/refs/heads/main/bewegung.json</a></p>
 <p>Go to <a href="https://go.bewegung.app/">https://go.bewegung.app/</a> and bind the downloaded file to the application.</p>
 <h2 id="host-on-your-own-server"><a class="header" href="#host-on-your-own-server">Host on your own server</a></h2>
-<p>If you want your app available from many devices without need to bind it specifillay on each device, you can develop your instance to your own server instead. Go to the directory where you want to place your files, e.g.</p>
+<p>If you want your app available from many devices without having to bind the file specifically on each device, you can deploy your instance to your own server instead. Go to the directory where you want to place your files, e.g.</p>
 <pre><code>cd /var/www/bewegung
 </code></pre>
-<p>Download the <a href="https://github.com/plans-coding/immer-in-bewegung/releases/latest/">latest release</a> and extract to the folder</p>
+<p>Download the <a href="https://github.com/plans-coding/immer-in-bewegung/releases/latest/">latest release</a> and extract it into that folder. Then point a web server at the directory and open it in your browser. For exposing the server to the internet (and optional authentication), see <a href="#other-needs">Other needs</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="create-the-dataset"><a class="header" href="#create-the-dataset">Create the dataset</a></h1>
 <h2 id="data-structure"><a class="header" href="#data-structure">Data Structure</a></h2>
@@ -361,10 +361,10 @@ getLatestReleaseTag();
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="trip-syntax"><a class="header" href="#trip-syntax">Trip Syntax</a></h1>
 <h2 id="trip-object"><a class="header" href="#trip-object">Trip Object</a></h2>
-<p>Each trip object has fields according to the following. The name of the key of each trip is the InnerId, which is a unique six characters long string randomly generated at creation.</p>
+<p>Each trip object has fields according to the following. The key of each trip object is the InnerId — a six-character hexadecimal string (characters <code>0</code>–<code>9</code> and <code>a</code>–<code>f</code>) generated randomly when the trip is created. You do not set it manually.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>Regarding validation: Some fields are checked for syntax and must comply to that.</p>
+<p>Date, time and coordinate fields below should follow the stated format so they display correctly and feed the statistics. The editor auto-formats most of these, but the format is not strictly enforced — malformed values may simply be ignored (e.g. a pin with an unparseable coordinate is not plotted).</p>
 </blockquote>
 <div class="table-wrapper">
 <table>
@@ -372,25 +372,31 @@ getLatestReleaseTag();
 <tr><th>Field</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>ArrangerGroup</td><td>Could e.g. be <strong>Family</strong>, <strong>Private</strong>, or <strong>Work</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
-<tr><td>OuterId</td><td>The OuterID is exposed to end-user of the web app. Normally you can take the first letter of the TripDomain and the first letter of ParticipantGroup and add a chronological number.<br /><br /><strong>Syntax:</strong> <code>&lt;letters and dashes and serial numbers of your choice&gt;</code></td></tr>
+<tr><td>TripDomain</td><td>The category of the trip. Allowed values are the keys defined in <code>TripDomainColors</code> (see <a href="#trip-domains">Settings</a>); by default <strong>Domestic</strong>, <strong>Abroad</strong>, or <strong>Attachment</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;one of the defined trip domains&gt;</code></td></tr>
+<tr><td>ArrangerGroup</td><td>Who arranged the trip, e.g. <strong>Family</strong>, <strong>Private</strong>, or <strong>Work</strong>. Allowed values are the entries in <code>ArrangerGroups</code> (see <a href="#settings">Settings</a>).<br /><br /><strong>Syntax:</strong> <code>&lt;one of the defined arranger groups&gt;</code></td></tr>
+<tr><td>OuterId</td><td>The OuterId is the trip identifier exposed to the end-user of the web app. In the editor it is auto-filled as the first letter of <code>TripDomain</code> plus the first letter of <code>ArrangerGroup</code> (uppercased), followed by a dash and a sequential number per prefix — e.g. a <strong>Domestic</strong> <strong>Family</strong> trip becomes <code>DF-1</code>, the next <code>DF-2</code>. You can override it with any value.<br /><br /><strong>Syntax:</strong> <code>XX-N</code> (auto), or a custom string.</td></tr>
 <tr><td>OverallDestination</td><td>Type in you trip primary destination. E.g. <strong>Finland</strong>, or <strong>Italia, Spain etc.</strong><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>DepartureDate</td><td>Your departure date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
 <tr><td>ReturnDate</td><td>Your return date in ISO format.<br /><br /><strong>Syntax:</strong> <code>YYYY-MM-DD</code></td></tr>
 <tr><td>TripLabels</td><td>Add keywords to the trip for filter purposes.<br /><br /><strong>Syntax:</strong> <code>LabelA, LabelB, LabelC, ...</code></td></tr>
-<tr><td>MapPins</td><td>The main stops of your trip that you want to plot on the map.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>[ NAME_OF_MAP_PIN ]( LATITUDE, LONGITUDE )</code></td></tr>
+<tr><td>MapPins</td><td>The main stops of your trip that you want to plot on the map. One pin per line.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>[ NAME_OF_MAP_PIN ]( latitude, longitude )</code> — decimal degrees, comma-separated.</td></tr>
+<tr><td>StartNode</td><td>Where the trip started. <strong>N.B.</strong> <em>Not exposed in the web app</em> — for your own records.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
+<tr><td>EndNode</td><td>Where the trip ended. <strong>N.B.</strong> <em>Not exposed in the web app</em> — for your own records.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>TripDescription</td><td>A short description that explain the aim of the trip. E.g. <strong>My fantastic summer trip to France</strong>.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>PhotoStarttime</td><td><em>For use with Immich.</em> If you leave your home at let say 8 pm and don’t want to include photos from earlier on <strong>departure day</strong>, then you can set a time here. If left empty, all photos from departure day will be included.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
 <tr><td>PhotoEndtime</td><td><em>For use with Immich.</em> Same as above, but for <strong>return day</strong>.<br /><br /><strong>Syntax:</strong> <code>HH:MM</code></td></tr>
+<tr><td>PhotoAlbums</td><td><em>For use with Immich.</em> Names of Immich albums to link from the trip. Each <code>[ Album Name ]</code> becomes a button that opens the matching album in Immich. You can also add <code>!desc[ text ]</code> to create a button that searches Immich for photos with that description.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>[ Album Name ] !desc[ description ]</code></td></tr>
+<tr><td>CoverPhoto</td><td>The cover image of the trip, shown in <strong>Cards view</strong> and in the report. Provide a direct image URL.<br /><br /><strong>Syntax:</strong> <code>&lt;image URL&gt;</code></td></tr>
+<tr><td>DocumentationNote</td><td>Free-text note for the whole trip. <strong>N.B.</strong> <em>Not exposed in the web app</em> — for your own records.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>Days</td><td>An array containg each day and their related data. See below.</td></tr>
 </tbody>
 </table>
 </div>
 <h2 id="trip-day-object"><a class="header" href="#trip-day-object">Trip Day Object</a></h2>
-<p>There is a second level array object in the trip object with fields according to following.</p>
+<p>There is a second level array object (<code>Days</code>) in the trip object with fields according to following.</p>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>Regarding validation: Some fields are checked for syntax and must comply to that.</p>
+<p>Date and coordinate fields below should follow the stated format so they display and map correctly. The format is not strictly enforced — malformed values are simply ignored where they can’t be parsed.</p>
 </blockquote>
 <div class="table-wrapper">
 <table>
@@ -402,11 +408,11 @@ getLatestReleaseTag();
 <tr><td>Events</td><td>This is your fully description of what you did this day.<br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>Accommodation</td><td>The name and the address of your accommodation.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AccommodationCountry</td><td>The name of the country you stayed in during the night.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
-<tr><td>AccommodationCoordinateAccuracy</td><td>Possibility to mark the accuracy of the coordinates.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
-<tr><td>AccommodationCoordinates</td><td>The gps coordinates of your accommodation, e.g. <strong>59.329444, 18.068611</strong>.<br /><br /><strong>Syntax:</strong> <code>lat_decimal,lng_decimal</code></td></tr>
+<tr><td>AccommodationCoordinates</td><td>The GPS coordinates of your accommodation in decimal degrees, e.g. <strong>59.329444, 18.068611</strong>. The space after the comma is optional.<br /><br /><strong>Syntax:</strong> <code>latitude, longitude</code></td></tr>
+<tr><td>AccommodationCoordinatesAccuracy</td><td>Free-text note on the accuracy of the coordinates, shown next to the accommodation, e.g. <strong>exact</strong> or <strong>approximate</strong>. Optional.<br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>TravelParticipants</td><td>The name of your travel buddies, separated by comma. <strong>N.B.</strong> <em>This is not exposed in web app.</em><br /><br /><strong>Syntax:</strong> <code>&lt;string&gt;</code></td></tr>
 <tr><td>AdditionalNotes</td><td><strong>N.B.</strong> <em>Additional notes are not exposed in web app.</em><br /><br /><strong>Syntax (multi-line accepted):</strong> <code>&lt;string&gt;</code></td></tr>
-<tr><td>CountriesDuringDay</td><td>This field is for enhanced statistics. Enter all countries in cronologial order during that day, separated by comma. The country names need to conform to the country names defined in <code>ContinentCountries</code>. In front of the country name prefix <code>*</code>, <code>**</code>, and <code>+</code> is allowed. Read more under <a href="#special-syntax-used-for-countries-during-day-events">Special syntax used for Countries During Day (Events)</a>.<br /><br /><strong>Syntax (prefix allowed):</strong> <code>&lt;country name without space&gt;, &lt;country name without space&gt;, &lt;country name without space&gt; [...]</code></td></tr>
+<tr><td>CountriesDuringDay</td><td>This field is for enhanced statistics. Enter all countries in chronological order during that day, separated by comma. The country names need to conform to the country names defined in <code>ContinentCountries</code>. In front of a country name the prefixes <code>*</code>, <code>**</code>, and <code>+</code> are allowed. Read more under <a href="#special-syntax-used-for-countries-during-day-events">Special syntax used for Countries During Day (Events)</a>.<br /><br /><strong>Syntax (prefix allowed):</strong> <code>&lt;country name without space&gt;, &lt;country name without space&gt;, &lt;country name without space&gt; [...]</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -417,15 +423,15 @@ getLatestReleaseTag();
 <tr><th>Prefix</th><th>Function</th></tr>
 </thead>
 <tbody>
-<tr><td>*</td><td>Shorter visit of significant importance</td></tr>
-<tr><td>**</td><td>Very short visit of without significant importance</td></tr>
-<tr><td>+</td><td>Restore, counts only if * and ** count</td></tr>
+<tr><td><code>*</code></td><td>Shorter visit, but of significant importance</td></tr>
+<tr><td><code>**</code></td><td>Very short visit, without significant importance</td></tr>
+<tr><td><code>+</code></td><td>Re-entry / pass-through of a country. Like <code>**</code>, it is <strong>not</strong> added to your count of unique visited countries.</td></tr>
 </tbody>
 </table>
 </div>
 <blockquote class="blockquote-tag blockquote-tag-note">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
-<p>Countries During Day: When a prefix is used in front of a country name in field <strong>CountriesDuringDay</strong> in table <code>bewb_Events</code> it affect the <strong>Statistics</strong> page.</p>
+<p>Countries During Day: Using a prefix in front of a country name in the <strong>CountriesDuringDay</strong> field of a day affects how that country is counted on the <strong>Statistics</strong> page.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="settings"><a class="header" href="#settings">Settings</a></h1>
@@ -443,7 +449,7 @@ getLatestReleaseTag();
 <tr><td>Definition</td><td>ContinentCountries</td><td><strong>List</strong></td><td>Definitions of continents and countries as well as their language (and spelling).</td></tr>
 <tr><td>Definition</td><td>TripDomainColors</td><td><strong>List</strong></td><td>Color definitions of your trip domains.</td></tr>
 <tr><td>Base</td><td>Immich</td><td><strong>Disabled</strong> or <strong>Enabled</strong></td><td>Enable if you want filter links from all event dates to Immich.</td></tr>
-<tr><td>Photos</td><td>ImmichApiKey</td><td><strong>Key</strong></td><td></td></tr>
+<tr><td>Photos</td><td>ImmichApiKey</td><td><strong>Key</strong></td><td>API key generated in Immich, used to authenticate the photo requests.</td></tr>
 <tr><td>Photos</td><td>ImmichCoverAlbumId</td><td><strong>GUID</strong></td><td>The GUID of the cover photo album in Immich.</td></tr>
 <tr><td>Photos</td><td>ImmichUrl</td><td><strong>URL</strong></td><td>Online URL to the Immich installation (e.g. <code>https://immich.example.com/</code>).</td></tr>
 <tr><td>Other</td><td>ExternalMapProvider</td><td><strong>URL</strong></td><td>Set your prefered map provider.</td></tr>
@@ -463,7 +469,7 @@ getLatestReleaseTag();
 <p>Set theme colors to your different <code>TripDomains</code>.</p>
 <pre><code>Domestic: #0b5394
 Abroad: #1d655e
-Attatchment: #C60C30
+Attachment: #C60C30
 </code></pre>
 <h3 id="continent-countries"><a class="header" href="#continent-countries">Continent Countries</a></h3>
 <p>If you want to change (make other country definitions or translate country names) the pre-defined country settings you can do it by changing in the country definitions. Only countries defined in the table <code>ContinentCountries</code>  can be used in your trip notes and only with the very exact spelling.</p>
@@ -709,7 +715,7 @@ Attatchment: #C60C30
 <h2 id="hide-immich-search-bar"><a class="header" href="#hide-immich-search-bar">Hide Immich search bar</a></h2>
 <blockquote class="blockquote-tag blockquote-tag-tip">
 <p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
-<p>When Immer in Bewegung embeds photos in <strong>image view</strong> (see below), the search bar from Immich will be displayed unless you use small a css modification in your Immich settings.</p>
+<p>When Immer in Bewegung embeds photos in <strong>image view</strong> (see below), the search bar from Immich will be displayed unless you apply a small CSS modification in your Immich settings.</p>
 </blockquote>
 <p>Add</p>
 <pre><code>body:has(#search-chips:target) #asset-selection-app-bar,
@@ -721,7 +727,7 @@ body:has(#search-chips:target) #search-content {
   background-color: #000000;
 }
 </code></pre>
-<p>to <strong>User Icon</strong> &gt; <strong>Admininstration</strong> &gt; <strong>Settings</strong> &gt; <strong>Theme Settings</strong>: Custom CSS.</p>
+<p>to <strong>User Icon</strong> &gt; <strong>Administration</strong> &gt; <strong>Settings</strong> &gt; <strong>Theme Settings</strong>: Custom CSS.</p>
 <h2 id="usage-of-immich-api"><a class="header" href="#usage-of-immich-api">Usage of Immich API</a></h2>
 <p>To make use of Immich API you need to allow CORS, example snippet to add to <strong>/etc/caddy/Caddyfile</strong></p>
 <pre><code>(cors) {
@@ -799,7 +805,7 @@ immich.your-server-name.dedyn.io {
 </li>
 </ul>
 <h2 id="usage-of-sqlite"><a class="header" href="#usage-of-sqlite">Usage of SQLite</a></h2>
-<p>Earlier editions of this application featured SQLite as the storage format instead of JSON. If you want to make a copy of your JSON documentation and store it in SQLlite you can use the file located at <code>extra/json_input_without_settings.sql</code> and paste the json code into it.</p>
+<p>Earlier editions of this application featured SQLite as the storage format instead of JSON. If you want to make a copy of your JSON documentation and store it in SQLite you can use the conversion tool located at <a href="https://go.bewegung.app/extra/json2sqlite.html">https://go.bewegung.app/extra/json2sqlite.html</a>.</p>
 <img style="display:block;" src="img/sqlite.svg" alt="SQLite" height="65">
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="logotype"><a class="header" href="#logotype">Logotype</a></h1>

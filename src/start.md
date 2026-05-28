@@ -92,7 +92,7 @@ getLatestReleaseTag();
     <img src="img/frog.svg" style="height:150pt;">
         <h1 class="revisit">Revisit your travel memories</h1>
         <p>Open source travel documentation app for self-hosting or serverless usage<br><b>Lightweight and future proof</b></p>
-        <p><br>Try out the <a class="link" href="https://go.bewegung.app/">online version</a><br><font style="font-size:12pt;"><i>Press the <b>Load</b> button on landing page to use example data.</i></font></p>
+        <p><br>Try out the <a class="link" href="https://go.bewegung.app/">online version</a><br><font style="font-size:12pt;line-height:1;"><i>Press the <b>Load</b> button on landing page to use example data.</i></font></p>
     <br>
 
 <div class="stripes">

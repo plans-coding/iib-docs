@@ -2,7 +2,7 @@
 
 ## Hide Immich search bar
 > [!TIP]
-> When Immer in Bewegung embeds photos in **image view** (see below), the search bar from Immich will be displayed unless you use small a css modification in your Immich settings.
+> When Immer in Bewegung embeds photos in **image view** (see below), the search bar from Immich will be displayed unless you apply a small CSS modification in your Immich settings.
 
 Add
 ```
@@ -15,7 +15,7 @@ body:has(#search-chips:target) #search-content {
   background-color: #000000;
 }
 ```
-to **User Icon** > **Admininstration** > **Settings** > **Theme Settings**: Custom CSS.
+to **User Icon** > **Administration** > **Settings** > **Theme Settings**: Custom CSS.
 
 ## Usage of Immich API
 To make use of Immich API you need to allow CORS, example snippet to add to **/etc/caddy/Caddyfile**

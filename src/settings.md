@@ -11,7 +11,7 @@ The following settings are applicable
 |Definition|ContinentCountries|**List**|Definitions of continents and countries as well as their language (and spelling).|
 |Definition|TripDomainColors|**List**|Color definitions of your trip domains.|
 |Base|Immich|**Disabled** or **Enabled**|Enable if you want filter links from all event dates to Immich.|
-|Photos|ImmichApiKey|**Key**||
+|Photos|ImmichApiKey|**Key**|API key generated in Immich, used to authenticate the photo requests.|
 |Photos|ImmichCoverAlbumId|**GUID**|The GUID of the cover photo album in Immich.|
 |Photos|ImmichUrl|**URL**|Online URL to the Immich installation (e.g. `https://immich.example.com/`).|
 |Other|ExternalMapProvider|**URL**|Set your prefered map provider.|
@@ -32,7 +32,7 @@ Set theme colors to your different `TripDomains`.
 ```
 Domestic: #0b5394
 Abroad: #1d655e
-Attatchment: #C60C30
+Attachment: #C60C30
 ```
 
 
