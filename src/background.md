@@ -6,6 +6,7 @@ That is how **Immer in Bewegung** was born. The name, meaning *always in movemen
 
 > [!NOTE]
 > You can check out the online app running at [https://go.bewegung.app/](https://go.bewegung.app/). Click on **Load** if you want to try with example data.
+
 ## Basic idea
 
 Over time, most code in applications becomes obsolete. To ensure your memories are not lost to such obsolescence, the core idea of this project is to visualize travel data stored in the <a href="https://www.json.org/" target="_blank">JSON</a> format. JavaScript Object Notation (JSON) is an incredibly structured way to store data, offers long-term reliability, and is more likely to remain compatible with future technologies. This makes it a solid, future-proof solution. However, scrolling through a long JSON file directly can be tedious—so why not build an interface on top? But this project is not just an application; it's a versatile syntax that allows you to take travel notes in a simple and structured way.

@@ -16,6 +16,9 @@ The following settings are applicable
 |Photos|ImmichUrl|**URL**|Online URL to the Immich installation (e.g. `https://immich.example.com/`).|
 |Other|ExternalMapProvider|**URL**|Set your prefered map provider.|
 
+> [!NOTE]
+> There are some Extensions too, that you can read about [here](./extension.md).
+
 ### Arranger Group
 A categorisation of the arrangers of different trips.
 
