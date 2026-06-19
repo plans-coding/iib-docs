@@ -17,7 +17,7 @@ The following settings are applicable
 |Other|ExternalMapProvider|**URL**|Set your prefered map provider.|
 
 > [!NOTE]
-> There are some Extensions too, that you can read about [here](./extension.md).
+> There are some Extensions too, that you can read about [here](./extensions.md).
 
 ### Arranger Group
 A categorisation of the arrangers of different trips.
