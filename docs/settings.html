@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-d974e5f1.js";
+            window.path_to_searchindex_js = "searchindex-5c323fed.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-5f67551c.js"></script>
@@ -446,6 +446,26 @@ Attachment: #C60C30
     "Uruguay": "UY",
     "Venezuela": "VE"
   }
+}
+</code></pre>
+<h1 id="extensions"><a class="header" href="#extensions">Extensions</a></h1>
+<h2 id="diary"><a class="header" href="#diary">Diary</a></h2>
+<p>If you have photographed physical diary notes, you can add a Diary button to the applicable day notes.</p>
+<h2 id="movie"><a class="header" href="#movie">Movie</a></h2>
+<p>If you have analogue video digitized, you can enable this plugin.</p>
+<h2 id="passport"><a class="header" href="#passport">Passport</a></h2>
+<p>If you have photographed physical passport pages, you can add a Passport button to the applicable day notes.</p>
+<h2 id="theme"><a class="header" href="#theme">Theme</a></h2>
+<p>If you want to plot theme pins to map, you can enable this plugin.</p>
+<h2 id="snapshot-upload"><a class="header" href="#snapshot-upload">Snapshot Upload</a></h2>
+<p>If you bind a local file and make updates that you want to backup, then activate this extension together with Webdav on your server.</p>
+<h3 id="example-for-caddy"><a class="header" href="#example-for-caddy">Example for Caddy</a></h3>
+<p>Build Caddy with Caddy-WebDav <a href="https://github.com/mholt/caddy-webdav">https://github.com/mholt/caddy-webdav</a>. Then in the Caddyfile add adequate configuration, e.g.</p>
+<pre><code class="language-text title=&quot;/etc/caddy/Caddyfile&quot;">handle /bewegung/uploads/* {
+    webdav /bewegung/uploads/* {
+        root /www/bewegung/uploads
+        prefix /bewegung/uploads
+    }
 }
 </code></pre>
 
