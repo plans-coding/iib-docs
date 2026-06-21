@@ -88,7 +88,8 @@ getLatestReleaseTag();
 </script>
 <br>
 <div class="start-container">
-    <div style="position:absolute;padding-left:10%;"><img src="img/4th_gen.svg" height="200"></div>
+<!--    <div style="position:absolute;padding-left:10%;"><img src="img/4th_gen.svg" height="200"></div>
+-->
     <img src="img/frog.svg" style="height:150pt;">
         <h1 class="revisit">Revisit your travel memories</h1>
         <p>Open source travel documentation app for self-hosting or serverless usage<br><b>Lightweight and future proof</b></p>
